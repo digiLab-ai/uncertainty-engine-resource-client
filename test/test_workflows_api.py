@@ -14,7 +14,7 @@
 
 import unittest
 
-from my_api_client.api.workflows_api import WorkflowsApi
+from uncertainty_engine_resource_client.api.workflows_api import WorkflowsApi
 
 
 class TestWorkflowsApi(unittest.IsolatedAsyncioTestCase):

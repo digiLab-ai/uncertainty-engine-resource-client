@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from uncertainty-engine-resource-client.models.http_validation_error import HTTPValidationError
+from uncertainty_engine_resource_client.models.http_validation_error import HTTPValidationError
 
 # TODO update the JSON string below
 json = "{}"

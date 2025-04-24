@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from uncertainty-engine-resource-client.models.patch_resource_version_request import PatchResourceVersionRequest
+from uncertainty_engine_resource_client.models.patch_resource_version_request import PatchResourceVersionRequest
 
 # TODO update the JSON string below
 json = "{}"

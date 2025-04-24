@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from uncertainty-engine-resource-client.models.project_record_output import ProjectRecordOutput
+from uncertainty_engine_resource_client.models.project_record_output import ProjectRecordOutput
 
 # TODO update the JSON string below
 json = "{}"

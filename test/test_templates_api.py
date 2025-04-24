@@ -14,7 +14,7 @@
 
 import unittest
 
-from my_api_client.api.templates_api import TemplatesApi
+from uncertainty_engine_resource_client.api.templates_api import TemplatesApi
 
 
 class TestTemplatesApi(unittest.IsolatedAsyncioTestCase):

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from uncertainty-engine-resource-client.models.resource_response import ResourceResponse
+from uncertainty_engine_resource_client.models.resource_response import ResourceResponse
 
 # TODO update the JSON string below
 json = "{}"

@@ -1,4 +1,4 @@
-# uncertainty-engine-resource-client.DefaultApi
+# uncertainty_engine_resource_client.DefaultApi
 
 All URIs are relative to *https://tu8vus047g.execute-api.eu-west-2.amazonaws.com*
 
@@ -16,21 +16,21 @@ Health
 
 
 ```python
-import uncertainty-engine-resource-client
-from uncertainty-engine-resource-client.rest import ApiException
+import uncertainty_engine_resource_client
+from uncertainty_engine_resource_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://tu8vus047g.execute-api.eu-west-2.amazonaws.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = uncertainty-engine-resource-client.Configuration(
+configuration = uncertainty_engine_resource_client.Configuration(
     host = "https://tu8vus047g.execute-api.eu-west-2.amazonaws.com"
 )
 
 
 # Enter a context with an instance of the API client
-async with uncertainty-engine-resource-client.ApiClient(configuration) as api_client:
+async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = uncertainty-engine-resource-client.DefaultApi(api_client)
+    api_instance = uncertainty_engine_resource_client.DefaultApi(api_client)
 
     try:
         # Health

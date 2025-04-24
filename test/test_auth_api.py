@@ -14,7 +14,7 @@
 
 import unittest
 
-from my_api_client.api.auth_api import AuthApi
+from uncertainty_engine_resource_client.api.auth_api import AuthApi
 
 
 class TestAuthApi(unittest.IsolatedAsyncioTestCase):

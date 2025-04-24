@@ -14,7 +14,7 @@
 
 import unittest
 
-from my_api_client.api.resources_api import ResourcesApi
+from uncertainty_engine_resource_client.api.resources_api import ResourcesApi
 
 
 class TestResourcesApi(unittest.IsolatedAsyncioTestCase):

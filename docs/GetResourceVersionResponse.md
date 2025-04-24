@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from uncertainty-engine-resource-client.models.get_resource_version_response import GetResourceVersionResponse
+from uncertainty_engine_resource_client.models.get_resource_version_response import GetResourceVersionResponse
 
 # TODO update the JSON string below
 json = "{}"

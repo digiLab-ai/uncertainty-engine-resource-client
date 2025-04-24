@@ -1,4 +1,4 @@
-# uncertainty-engine-resource-client.ResourcesApi
+# uncertainty_engine_resource_client.ResourcesApi
 
 All URIs are relative to *https://tu8vus047g.execute-api.eu-west-2.amazonaws.com*
 
@@ -31,21 +31,21 @@ It will also delete all of the actual resources from cloud storage.
 
 
 ```python
-import uncertainty-engine-resource-client
-from uncertainty-engine-resource-client.rest import ApiException
+import uncertainty_engine_resource_client
+from uncertainty_engine_resource_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://tu8vus047g.execute-api.eu-west-2.amazonaws.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = uncertainty-engine-resource-client.Configuration(
+configuration = uncertainty_engine_resource_client.Configuration(
     host = "https://tu8vus047g.execute-api.eu-west-2.amazonaws.com"
 )
 
 
 # Enter a context with an instance of the API client
-async with uncertainty-engine-resource-client.ApiClient(configuration) as api_client:
+async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = uncertainty-engine-resource-client.ResourcesApi(api_client)
+    api_instance = uncertainty_engine_resource_client.ResourcesApi(api_client)
     project_id = 'project_id_example' # str | 
     resource_type = 'resource_type_example' # str | 
     resource_id = 'resource_id_example' # str | 
@@ -106,21 +106,21 @@ It will also update the resource record to remove the version id from the list o
 
 
 ```python
-import uncertainty-engine-resource-client
-from uncertainty-engine-resource-client.rest import ApiException
+import uncertainty_engine_resource_client
+from uncertainty_engine_resource_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://tu8vus047g.execute-api.eu-west-2.amazonaws.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = uncertainty-engine-resource-client.Configuration(
+configuration = uncertainty_engine_resource_client.Configuration(
     host = "https://tu8vus047g.execute-api.eu-west-2.amazonaws.com"
 )
 
 
 # Enter a context with an instance of the API client
-async with uncertainty-engine-resource-client.ApiClient(configuration) as api_client:
+async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = uncertainty-engine-resource-client.ResourcesApi(api_client)
+    api_instance = uncertainty_engine_resource_client.ResourcesApi(api_client)
     project_id = 'project_id_example' # str | 
     resource_type = 'resource_type_example' # str | 
     resource_id = 'resource_id_example' # str | 
@@ -183,22 +183,22 @@ The resource its self is returned as a presigned GET URL.
 
 
 ```python
-import uncertainty-engine-resource-client
-from uncertainty-engine-resource-client.models.get_resource_version_response import GetResourceVersionResponse
-from uncertainty-engine-resource-client.rest import ApiException
+import uncertainty_engine_resource_client
+from uncertainty_engine_resource_client.models.get_resource_version_response import GetResourceVersionResponse
+from uncertainty_engine_resource_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://tu8vus047g.execute-api.eu-west-2.amazonaws.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = uncertainty-engine-resource-client.Configuration(
+configuration = uncertainty_engine_resource_client.Configuration(
     host = "https://tu8vus047g.execute-api.eu-west-2.amazonaws.com"
 )
 
 
 # Enter a context with an instance of the API client
-async with uncertainty-engine-resource-client.ApiClient(configuration) as api_client:
+async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = uncertainty-engine-resource-client.ResourcesApi(api_client)
+    api_instance = uncertainty_engine_resource_client.ResourcesApi(api_client)
     project_id = 'project_id_example' # str | 
     resource_type = 'resource_type_example' # str | 
     resource_id = 'resource_id_example' # str | 
@@ -260,22 +260,22 @@ a list of version IDs for each resource. These IDs can be used to retrieve the a
 
 
 ```python
-import uncertainty-engine-resource-client
-from uncertainty-engine-resource-client.models.get_resource_records_response import GetResourceRecordsResponse
-from uncertainty-engine-resource-client.rest import ApiException
+import uncertainty_engine_resource_client
+from uncertainty_engine_resource_client.models.get_resource_records_response import GetResourceRecordsResponse
+from uncertainty_engine_resource_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://tu8vus047g.execute-api.eu-west-2.amazonaws.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = uncertainty-engine-resource-client.Configuration(
+configuration = uncertainty_engine_resource_client.Configuration(
     host = "https://tu8vus047g.execute-api.eu-west-2.amazonaws.com"
 )
 
 
 # Enter a context with an instance of the API client
-async with uncertainty-engine-resource-client.ApiClient(configuration) as api_client:
+async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = uncertainty-engine-resource-client.ResourcesApi(api_client)
+    api_instance = uncertainty_engine_resource_client.ResourcesApi(api_client)
     project_id = 'project_id_example' # str | 
     resource_type = 'resource_type_example' # str | 
 
@@ -334,22 +334,22 @@ a list of version IDs; these IDs can be used to retrieve the actual resource ver
 
 
 ```python
-import uncertainty-engine-resource-client
-from uncertainty-engine-resource-client.models.resource_response import ResourceResponse
-from uncertainty-engine-resource-client.rest import ApiException
+import uncertainty_engine_resource_client
+from uncertainty_engine_resource_client.models.resource_response import ResourceResponse
+from uncertainty_engine_resource_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://tu8vus047g.execute-api.eu-west-2.amazonaws.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = uncertainty-engine-resource-client.Configuration(
+configuration = uncertainty_engine_resource_client.Configuration(
     host = "https://tu8vus047g.execute-api.eu-west-2.amazonaws.com"
 )
 
 
 # Enter a context with an instance of the API client
-async with uncertainty-engine-resource-client.ApiClient(configuration) as api_client:
+async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = uncertainty-engine-resource-client.ResourcesApi(api_client)
+    api_instance = uncertainty_engine_resource_client.ResourcesApi(api_client)
     project_id = 'project_id_example' # str | 
     resource_type = 'resource_type_example' # str | 
     resource_id = 'resource_id_example' # str | 
@@ -407,22 +407,22 @@ Get a single resource version from a resource.
 
 
 ```python
-import uncertainty-engine-resource-client
-from uncertainty-engine-resource-client.models.get_resource_version_response import GetResourceVersionResponse
-from uncertainty-engine-resource-client.rest import ApiException
+import uncertainty_engine_resource_client
+from uncertainty_engine_resource_client.models.get_resource_version_response import GetResourceVersionResponse
+from uncertainty_engine_resource_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://tu8vus047g.execute-api.eu-west-2.amazonaws.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = uncertainty-engine-resource-client.Configuration(
+configuration = uncertainty_engine_resource_client.Configuration(
     host = "https://tu8vus047g.execute-api.eu-west-2.amazonaws.com"
 )
 
 
 # Enter a context with an instance of the API client
-async with uncertainty-engine-resource-client.ApiClient(configuration) as api_client:
+async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = uncertainty-engine-resource-client.ResourcesApi(api_client)
+    api_instance = uncertainty_engine_resource_client.ResourcesApi(api_client)
     project_id = 'project_id_example' # str | 
     resource_type = 'resource_type_example' # str | 
     resource_id = 'resource_id_example' # str | 
@@ -487,22 +487,22 @@ This can be useful for debugging and auditing purposes.
 
 
 ```python
-import uncertainty-engine-resource-client
-from uncertainty-engine-resource-client.models.get_resource_version_records_response import GetResourceVersionRecordsResponse
-from uncertainty-engine-resource-client.rest import ApiException
+import uncertainty_engine_resource_client
+from uncertainty_engine_resource_client.models.get_resource_version_records_response import GetResourceVersionRecordsResponse
+from uncertainty_engine_resource_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://tu8vus047g.execute-api.eu-west-2.amazonaws.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = uncertainty-engine-resource-client.Configuration(
+configuration = uncertainty_engine_resource_client.Configuration(
     host = "https://tu8vus047g.execute-api.eu-west-2.amazonaws.com"
 )
 
 
 # Enter a context with an instance of the API client
-async with uncertainty-engine-resource-client.ApiClient(configuration) as api_client:
+async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = uncertainty-engine-resource-client.ResourcesApi(api_client)
+    api_instance = uncertainty_engine_resource_client.ResourcesApi(api_client)
     project_id = 'project_id_example' # str | 
     resource_type = 'resource_type_example' # str | 
     resource_id = 'resource_id_example' # str | 
@@ -558,27 +558,27 @@ Patch Resource Version
 
 
 ```python
-import uncertainty-engine-resource-client
-from uncertainty-engine-resource-client.models.patch_resource_version_request import PatchResourceVersionRequest
-from uncertainty-engine-resource-client.rest import ApiException
+import uncertainty_engine_resource_client
+from uncertainty_engine_resource_client.models.patch_resource_version_request import PatchResourceVersionRequest
+from uncertainty_engine_resource_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://tu8vus047g.execute-api.eu-west-2.amazonaws.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = uncertainty-engine-resource-client.Configuration(
+configuration = uncertainty_engine_resource_client.Configuration(
     host = "https://tu8vus047g.execute-api.eu-west-2.amazonaws.com"
 )
 
 
 # Enter a context with an instance of the API client
-async with uncertainty-engine-resource-client.ApiClient(configuration) as api_client:
+async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = uncertainty-engine-resource-client.ResourcesApi(api_client)
+    api_instance = uncertainty_engine_resource_client.ResourcesApi(api_client)
     project_id = 'project_id_example' # str | 
     resource_type = 'resource_type_example' # str | 
     resource_id = 'resource_id_example' # str | 
     resource_version_id = 'resource_version_id_example' # str | 
-    patch_resource_version_request = uncertainty-engine-resource-client.PatchResourceVersionRequest() # PatchResourceVersionRequest | 
+    patch_resource_version_request = uncertainty_engine_resource_client.PatchResourceVersionRequest() # PatchResourceVersionRequest | 
 
     try:
         # Patch Resource Version
@@ -639,26 +639,26 @@ Before creating a version of a resource, the resource record must be created.
 
 
 ```python
-import uncertainty-engine-resource-client
-from uncertainty-engine-resource-client.models.post_resource_record_request import PostResourceRecordRequest
-from uncertainty-engine-resource-client.models.resource_response import ResourceResponse
-from uncertainty-engine-resource-client.rest import ApiException
+import uncertainty_engine_resource_client
+from uncertainty_engine_resource_client.models.post_resource_record_request import PostResourceRecordRequest
+from uncertainty_engine_resource_client.models.resource_response import ResourceResponse
+from uncertainty_engine_resource_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://tu8vus047g.execute-api.eu-west-2.amazonaws.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = uncertainty-engine-resource-client.Configuration(
+configuration = uncertainty_engine_resource_client.Configuration(
     host = "https://tu8vus047g.execute-api.eu-west-2.amazonaws.com"
 )
 
 
 # Enter a context with an instance of the API client
-async with uncertainty-engine-resource-client.ApiClient(configuration) as api_client:
+async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = uncertainty-engine-resource-client.ResourcesApi(api_client)
+    api_instance = uncertainty_engine_resource_client.ResourcesApi(api_client)
     project_id = 'project_id_example' # str | 
     resource_type = 'resource_type_example' # str | 
-    post_resource_record_request = uncertainty-engine-resource-client.PostResourceRecordRequest() # PostResourceRecordRequest | 
+    post_resource_record_request = uncertainty_engine_resource_client.PostResourceRecordRequest() # PostResourceRecordRequest | 
 
     try:
         # Post Resource Record
@@ -716,27 +716,27 @@ The client should use the presigned URL to upload the large resource and then ca
 
 
 ```python
-import uncertainty-engine-resource-client
-from uncertainty-engine-resource-client.models.post_resource_version_request import PostResourceVersionRequest
-from uncertainty-engine-resource-client.models.post_resource_version_response import PostResourceVersionResponse
-from uncertainty-engine-resource-client.rest import ApiException
+import uncertainty_engine_resource_client
+from uncertainty_engine_resource_client.models.post_resource_version_request import PostResourceVersionRequest
+from uncertainty_engine_resource_client.models.post_resource_version_response import PostResourceVersionResponse
+from uncertainty_engine_resource_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://tu8vus047g.execute-api.eu-west-2.amazonaws.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = uncertainty-engine-resource-client.Configuration(
+configuration = uncertainty_engine_resource_client.Configuration(
     host = "https://tu8vus047g.execute-api.eu-west-2.amazonaws.com"
 )
 
 
 # Enter a context with an instance of the API client
-async with uncertainty-engine-resource-client.ApiClient(configuration) as api_client:
+async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = uncertainty-engine-resource-client.ResourcesApi(api_client)
+    api_instance = uncertainty_engine_resource_client.ResourcesApi(api_client)
     project_id = 'project_id_example' # str | 
     resource_type = 'resource_type_example' # str | 
     resource_id = 'resource_id_example' # str | 
-    post_resource_version_request = uncertainty-engine-resource-client.PostResourceVersionRequest() # PostResourceVersionRequest | 
+    post_resource_version_request = uncertainty_engine_resource_client.PostResourceVersionRequest() # PostResourceVersionRequest | 
 
     try:
         # Post Resource Version
@@ -799,21 +799,21 @@ an error will be raised.
 
 
 ```python
-import uncertainty-engine-resource-client
-from uncertainty-engine-resource-client.rest import ApiException
+import uncertainty_engine_resource_client
+from uncertainty_engine_resource_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://tu8vus047g.execute-api.eu-west-2.amazonaws.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = uncertainty-engine-resource-client.Configuration(
+configuration = uncertainty_engine_resource_client.Configuration(
     host = "https://tu8vus047g.execute-api.eu-west-2.amazonaws.com"
 )
 
 
 # Enter a context with an instance of the API client
-async with uncertainty-engine-resource-client.ApiClient(configuration) as api_client:
+async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = uncertainty-engine-resource-client.ResourcesApi(api_client)
+    api_instance = uncertainty_engine_resource_client.ResourcesApi(api_client)
     project_id = 'project_id_example' # str | 
     resource_type = 'resource_type_example' # str | 
     resource_id = 'resource_id_example' # str | 

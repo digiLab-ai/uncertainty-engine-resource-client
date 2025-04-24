@@ -1,4 +1,4 @@
-# uncertainty-engine-resource-client.ProjectRecordsApi
+# uncertainty_engine_resource_client.ProjectRecordsApi
 
 All URIs are relative to *https://tu8vus047g.execute-api.eu-west-2.amazonaws.com*
 
@@ -20,21 +20,21 @@ Delete a project using the project id.
 
 
 ```python
-import uncertainty-engine-resource-client
-from uncertainty-engine-resource-client.rest import ApiException
+import uncertainty_engine_resource_client
+from uncertainty_engine_resource_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://tu8vus047g.execute-api.eu-west-2.amazonaws.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = uncertainty-engine-resource-client.Configuration(
+configuration = uncertainty_engine_resource_client.Configuration(
     host = "https://tu8vus047g.execute-api.eu-west-2.amazonaws.com"
 )
 
 
 # Enter a context with an instance of the API client
-async with uncertainty-engine-resource-client.ApiClient(configuration) as api_client:
+async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = uncertainty-engine-resource-client.ProjectRecordsApi(api_client)
+    api_instance = uncertainty_engine_resource_client.ProjectRecordsApi(api_client)
     project_id = 'project_id_example' # str | 
 
     try:
@@ -88,22 +88,22 @@ Get a single project using the project id.
 
 
 ```python
-import uncertainty-engine-resource-client
-from uncertainty-engine-resource-client.models.project_response import ProjectResponse
-from uncertainty-engine-resource-client.rest import ApiException
+import uncertainty_engine_resource_client
+from uncertainty_engine_resource_client.models.project_response import ProjectResponse
+from uncertainty_engine_resource_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://tu8vus047g.execute-api.eu-west-2.amazonaws.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = uncertainty-engine-resource-client.Configuration(
+configuration = uncertainty_engine_resource_client.Configuration(
     host = "https://tu8vus047g.execute-api.eu-west-2.amazonaws.com"
 )
 
 
 # Enter a context with an instance of the API client
-async with uncertainty-engine-resource-client.ApiClient(configuration) as api_client:
+async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = uncertainty-engine-resource-client.ProjectRecordsApi(api_client)
+    api_instance = uncertainty_engine_resource_client.ProjectRecordsApi(api_client)
     project_id = 'project_id_example' # str | 
 
     try:
@@ -157,24 +157,24 @@ Create a new project.
 
 
 ```python
-import uncertainty-engine-resource-client
-from uncertainty-engine-resource-client.models.post_project_record_request import PostProjectRecordRequest
-from uncertainty-engine-resource-client.models.project_response import ProjectResponse
-from uncertainty-engine-resource-client.rest import ApiException
+import uncertainty_engine_resource_client
+from uncertainty_engine_resource_client.models.post_project_record_request import PostProjectRecordRequest
+from uncertainty_engine_resource_client.models.project_response import ProjectResponse
+from uncertainty_engine_resource_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://tu8vus047g.execute-api.eu-west-2.amazonaws.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = uncertainty-engine-resource-client.Configuration(
+configuration = uncertainty_engine_resource_client.Configuration(
     host = "https://tu8vus047g.execute-api.eu-west-2.amazonaws.com"
 )
 
 
 # Enter a context with an instance of the API client
-async with uncertainty-engine-resource-client.ApiClient(configuration) as api_client:
+async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = uncertainty-engine-resource-client.ProjectRecordsApi(api_client)
-    post_project_record_request = uncertainty-engine-resource-client.PostProjectRecordRequest() # PostProjectRecordRequest | 
+    api_instance = uncertainty_engine_resource_client.ProjectRecordsApi(api_client)
+    post_project_record_request = uncertainty_engine_resource_client.PostProjectRecordRequest() # PostProjectRecordRequest | 
 
     try:
         # Post Project Record

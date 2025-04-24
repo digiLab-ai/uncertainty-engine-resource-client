@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from uncertainty-engine-resource-client.models.resource_version_record_input import ResourceVersionRecordInput
+from uncertainty_engine_resource_client.models.resource_version_record_input import ResourceVersionRecordInput
 
 # TODO update the JSON string below
 json = "{}"

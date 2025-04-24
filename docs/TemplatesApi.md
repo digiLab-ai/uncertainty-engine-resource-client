@@ -1,4 +1,4 @@
-# uncertainty-engine-resource-client.TemplatesApi
+# uncertainty_engine_resource_client.TemplatesApi
 
 All URIs are relative to *https://tu8vus047g.execute-api.eu-west-2.amazonaws.com*
 
@@ -19,21 +19,21 @@ Delete Workflow Template
 
 
 ```python
-import uncertainty-engine-resource-client
-from uncertainty-engine-resource-client.rest import ApiException
+import uncertainty_engine_resource_client
+from uncertainty_engine_resource_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://tu8vus047g.execute-api.eu-west-2.amazonaws.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = uncertainty-engine-resource-client.Configuration(
+configuration = uncertainty_engine_resource_client.Configuration(
     host = "https://tu8vus047g.execute-api.eu-west-2.amazonaws.com"
 )
 
 
 # Enter a context with an instance of the API client
-async with uncertainty-engine-resource-client.ApiClient(configuration) as api_client:
+async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = uncertainty-engine-resource-client.TemplatesApi(api_client)
+    api_instance = uncertainty_engine_resource_client.TemplatesApi(api_client)
     workflow_template_id = 'workflow_template_id_example' # str | 
 
     try:
@@ -85,22 +85,22 @@ Get Workflow Template
 
 
 ```python
-import uncertainty-engine-resource-client
-from uncertainty-engine-resource-client.models.workflow_template_response import WorkflowTemplateResponse
-from uncertainty-engine-resource-client.rest import ApiException
+import uncertainty_engine_resource_client
+from uncertainty_engine_resource_client.models.workflow_template_response import WorkflowTemplateResponse
+from uncertainty_engine_resource_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://tu8vus047g.execute-api.eu-west-2.amazonaws.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = uncertainty-engine-resource-client.Configuration(
+configuration = uncertainty_engine_resource_client.Configuration(
     host = "https://tu8vus047g.execute-api.eu-west-2.amazonaws.com"
 )
 
 
 # Enter a context with an instance of the API client
-async with uncertainty-engine-resource-client.ApiClient(configuration) as api_client:
+async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = uncertainty-engine-resource-client.TemplatesApi(api_client)
+    api_instance = uncertainty_engine_resource_client.TemplatesApi(api_client)
     workflow_template_id = 'workflow_template_id_example' # str | 
 
     try:
@@ -152,22 +152,22 @@ Get Workflow Templates
 
 
 ```python
-import uncertainty-engine-resource-client
-from uncertainty-engine-resource-client.models.get_workflow_template_records_response import GetWorkflowTemplateRecordsResponse
-from uncertainty-engine-resource-client.rest import ApiException
+import uncertainty_engine_resource_client
+from uncertainty_engine_resource_client.models.get_workflow_template_records_response import GetWorkflowTemplateRecordsResponse
+from uncertainty_engine_resource_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://tu8vus047g.execute-api.eu-west-2.amazonaws.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = uncertainty-engine-resource-client.Configuration(
+configuration = uncertainty_engine_resource_client.Configuration(
     host = "https://tu8vus047g.execute-api.eu-west-2.amazonaws.com"
 )
 
 
 # Enter a context with an instance of the API client
-async with uncertainty-engine-resource-client.ApiClient(configuration) as api_client:
+async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = uncertainty-engine-resource-client.TemplatesApi(api_client)
+    api_instance = uncertainty_engine_resource_client.TemplatesApi(api_client)
 
     try:
         # Get Workflow Templates
@@ -214,24 +214,24 @@ Workflow Template
 
 
 ```python
-import uncertainty-engine-resource-client
-from uncertainty-engine-resource-client.models.post_workflow_template_record_request import PostWorkflowTemplateRecordRequest
-from uncertainty-engine-resource-client.models.workflow_template_response import WorkflowTemplateResponse
-from uncertainty-engine-resource-client.rest import ApiException
+import uncertainty_engine_resource_client
+from uncertainty_engine_resource_client.models.post_workflow_template_record_request import PostWorkflowTemplateRecordRequest
+from uncertainty_engine_resource_client.models.workflow_template_response import WorkflowTemplateResponse
+from uncertainty_engine_resource_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://tu8vus047g.execute-api.eu-west-2.amazonaws.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = uncertainty-engine-resource-client.Configuration(
+configuration = uncertainty_engine_resource_client.Configuration(
     host = "https://tu8vus047g.execute-api.eu-west-2.amazonaws.com"
 )
 
 
 # Enter a context with an instance of the API client
-async with uncertainty-engine-resource-client.ApiClient(configuration) as api_client:
+async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = uncertainty-engine-resource-client.TemplatesApi(api_client)
-    post_workflow_template_record_request = uncertainty-engine-resource-client.PostWorkflowTemplateRecordRequest() # PostWorkflowTemplateRecordRequest | 
+    api_instance = uncertainty_engine_resource_client.TemplatesApi(api_client)
+    post_workflow_template_record_request = uncertainty_engine_resource_client.PostWorkflowTemplateRecordRequest() # PostWorkflowTemplateRecordRequest | 
 
     try:
         # Workflow Template

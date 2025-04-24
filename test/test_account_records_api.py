@@ -14,7 +14,7 @@
 
 import unittest
 
-from my_api_client.api.account_records_api import AccountRecordsApi
+from uncertainty_engine_resource_client.api.account_records_api import AccountRecordsApi
 
 
 class TestAccountRecordsApi(unittest.IsolatedAsyncioTestCase):

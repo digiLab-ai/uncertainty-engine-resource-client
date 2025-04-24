@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from uncertainty-engine-resource-client.models.post_workflow_template_record_request import PostWorkflowTemplateRecordRequest
+from uncertainty_engine_resource_client.models.post_workflow_template_record_request import PostWorkflowTemplateRecordRequest
 
 # TODO update the JSON string below
 json = "{}"

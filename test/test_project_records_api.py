@@ -14,7 +14,7 @@
 
 import unittest
 
-from my_api_client.api.project_records_api import ProjectRecordsApi
+from uncertainty_engine_resource_client.api.project_records_api import ProjectRecordsApi
 
 
 class TestProjectRecordsApi(unittest.IsolatedAsyncioTestCase):

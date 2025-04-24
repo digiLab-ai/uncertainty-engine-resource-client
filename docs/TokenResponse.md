@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from uncertainty-engine-resource-client.models.token_response import TokenResponse
+from uncertainty_engine_resource_client.models.token_response import TokenResponse
 
 # TODO update the JSON string below
 json = "{}"

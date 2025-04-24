@@ -1,4 +1,4 @@
-# uncertainty-engine-resource-client.WorkflowsApi
+# uncertainty_engine_resource_client.WorkflowsApi
 
 All URIs are relative to *https://tu8vus047g.execute-api.eu-west-2.amazonaws.com*
 
@@ -27,21 +27,21 @@ Delete a workflow (including all versions) using the workflow id.
 
 
 ```python
-import uncertainty-engine-resource-client
-from uncertainty-engine-resource-client.rest import ApiException
+import uncertainty_engine_resource_client
+from uncertainty_engine_resource_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://tu8vus047g.execute-api.eu-west-2.amazonaws.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = uncertainty-engine-resource-client.Configuration(
+configuration = uncertainty_engine_resource_client.Configuration(
     host = "https://tu8vus047g.execute-api.eu-west-2.amazonaws.com"
 )
 
 
 # Enter a context with an instance of the API client
-async with uncertainty-engine-resource-client.ApiClient(configuration) as api_client:
+async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = uncertainty-engine-resource-client.WorkflowsApi(api_client)
+    api_instance = uncertainty_engine_resource_client.WorkflowsApi(api_client)
     project_id = 'project_id_example' # str | 
     workflow_id = 'workflow_id_example' # str | 
 
@@ -97,21 +97,21 @@ Delete a workflow version using the version id.
 
 
 ```python
-import uncertainty-engine-resource-client
-from uncertainty-engine-resource-client.rest import ApiException
+import uncertainty_engine_resource_client
+from uncertainty_engine_resource_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://tu8vus047g.execute-api.eu-west-2.amazonaws.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = uncertainty-engine-resource-client.Configuration(
+configuration = uncertainty_engine_resource_client.Configuration(
     host = "https://tu8vus047g.execute-api.eu-west-2.amazonaws.com"
 )
 
 
 # Enter a context with an instance of the API client
-async with uncertainty-engine-resource-client.ApiClient(configuration) as api_client:
+async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = uncertainty-engine-resource-client.WorkflowsApi(api_client)
+    api_instance = uncertainty_engine_resource_client.WorkflowsApi(api_client)
     project_id = 'project_id_example' # str | 
     workflow_id = 'workflow_id_example' # str | 
     workflow_version_id = 'workflow_version_id_example' # str | 
@@ -169,22 +169,22 @@ Get the most recent workflow version for a workflow.
 
 
 ```python
-import uncertainty-engine-resource-client
-from uncertainty-engine-resource-client.models.workflow_version_response import WorkflowVersionResponse
-from uncertainty-engine-resource-client.rest import ApiException
+import uncertainty_engine_resource_client
+from uncertainty_engine_resource_client.models.workflow_version_response import WorkflowVersionResponse
+from uncertainty_engine_resource_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://tu8vus047g.execute-api.eu-west-2.amazonaws.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = uncertainty-engine-resource-client.Configuration(
+configuration = uncertainty_engine_resource_client.Configuration(
     host = "https://tu8vus047g.execute-api.eu-west-2.amazonaws.com"
 )
 
 
 # Enter a context with an instance of the API client
-async with uncertainty-engine-resource-client.ApiClient(configuration) as api_client:
+async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = uncertainty-engine-resource-client.WorkflowsApi(api_client)
+    api_instance = uncertainty_engine_resource_client.WorkflowsApi(api_client)
     project_id = 'project_id_example' # str | 
     workflow_id = 'workflow_id_example' # str | 
 
@@ -240,22 +240,22 @@ Get all workflow records for a project.
 
 
 ```python
-import uncertainty-engine-resource-client
-from uncertainty-engine-resource-client.models.get_workflow_records_response import GetWorkflowRecordsResponse
-from uncertainty-engine-resource-client.rest import ApiException
+import uncertainty_engine_resource_client
+from uncertainty_engine_resource_client.models.get_workflow_records_response import GetWorkflowRecordsResponse
+from uncertainty_engine_resource_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://tu8vus047g.execute-api.eu-west-2.amazonaws.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = uncertainty-engine-resource-client.Configuration(
+configuration = uncertainty_engine_resource_client.Configuration(
     host = "https://tu8vus047g.execute-api.eu-west-2.amazonaws.com"
 )
 
 
 # Enter a context with an instance of the API client
-async with uncertainty-engine-resource-client.ApiClient(configuration) as api_client:
+async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = uncertainty-engine-resource-client.WorkflowsApi(api_client)
+    api_instance = uncertainty_engine_resource_client.WorkflowsApi(api_client)
     project_id = 'project_id_example' # str | 
 
     try:
@@ -309,22 +309,22 @@ Get a single workflow from a project.
 
 
 ```python
-import uncertainty-engine-resource-client
-from uncertainty-engine-resource-client.models.workflow_response import WorkflowResponse
-from uncertainty-engine-resource-client.rest import ApiException
+import uncertainty_engine_resource_client
+from uncertainty_engine_resource_client.models.workflow_response import WorkflowResponse
+from uncertainty_engine_resource_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://tu8vus047g.execute-api.eu-west-2.amazonaws.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = uncertainty-engine-resource-client.Configuration(
+configuration = uncertainty_engine_resource_client.Configuration(
     host = "https://tu8vus047g.execute-api.eu-west-2.amazonaws.com"
 )
 
 
 # Enter a context with an instance of the API client
-async with uncertainty-engine-resource-client.ApiClient(configuration) as api_client:
+async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = uncertainty-engine-resource-client.WorkflowsApi(api_client)
+    api_instance = uncertainty_engine_resource_client.WorkflowsApi(api_client)
     project_id = 'project_id_example' # str | 
     workflow_id = 'workflow_id_example' # str | 
 
@@ -380,22 +380,22 @@ Get a single workflow version from a workflow.
 
 
 ```python
-import uncertainty-engine-resource-client
-from uncertainty-engine-resource-client.models.workflow_version_response import WorkflowVersionResponse
-from uncertainty-engine-resource-client.rest import ApiException
+import uncertainty_engine_resource_client
+from uncertainty_engine_resource_client.models.workflow_version_response import WorkflowVersionResponse
+from uncertainty_engine_resource_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://tu8vus047g.execute-api.eu-west-2.amazonaws.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = uncertainty-engine-resource-client.Configuration(
+configuration = uncertainty_engine_resource_client.Configuration(
     host = "https://tu8vus047g.execute-api.eu-west-2.amazonaws.com"
 )
 
 
 # Enter a context with an instance of the API client
-async with uncertainty-engine-resource-client.ApiClient(configuration) as api_client:
+async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = uncertainty-engine-resource-client.WorkflowsApi(api_client)
+    api_instance = uncertainty_engine_resource_client.WorkflowsApi(api_client)
     project_id = 'project_id_example' # str | 
     workflow_id = 'workflow_id_example' # str | 
     workflow_version_id = 'workflow_version_id_example' # str | 
@@ -453,22 +453,22 @@ Get all workflow version records for a workflow.
 
 
 ```python
-import uncertainty-engine-resource-client
-from uncertainty-engine-resource-client.models.get_workflow_version_records_response import GetWorkflowVersionRecordsResponse
-from uncertainty-engine-resource-client.rest import ApiException
+import uncertainty_engine_resource_client
+from uncertainty_engine_resource_client.models.get_workflow_version_records_response import GetWorkflowVersionRecordsResponse
+from uncertainty_engine_resource_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://tu8vus047g.execute-api.eu-west-2.amazonaws.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = uncertainty-engine-resource-client.Configuration(
+configuration = uncertainty_engine_resource_client.Configuration(
     host = "https://tu8vus047g.execute-api.eu-west-2.amazonaws.com"
 )
 
 
 # Enter a context with an instance of the API client
-async with uncertainty-engine-resource-client.ApiClient(configuration) as api_client:
+async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = uncertainty-engine-resource-client.WorkflowsApi(api_client)
+    api_instance = uncertainty_engine_resource_client.WorkflowsApi(api_client)
     project_id = 'project_id_example' # str | 
     workflow_id = 'workflow_id_example' # str | 
 
@@ -524,25 +524,25 @@ Create a new workflow record.
 
 
 ```python
-import uncertainty-engine-resource-client
-from uncertainty-engine-resource-client.models.post_workflow_record_request import PostWorkflowRecordRequest
-from uncertainty-engine-resource-client.models.workflow_response import WorkflowResponse
-from uncertainty-engine-resource-client.rest import ApiException
+import uncertainty_engine_resource_client
+from uncertainty_engine_resource_client.models.post_workflow_record_request import PostWorkflowRecordRequest
+from uncertainty_engine_resource_client.models.workflow_response import WorkflowResponse
+from uncertainty_engine_resource_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://tu8vus047g.execute-api.eu-west-2.amazonaws.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = uncertainty-engine-resource-client.Configuration(
+configuration = uncertainty_engine_resource_client.Configuration(
     host = "https://tu8vus047g.execute-api.eu-west-2.amazonaws.com"
 )
 
 
 # Enter a context with an instance of the API client
-async with uncertainty-engine-resource-client.ApiClient(configuration) as api_client:
+async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = uncertainty-engine-resource-client.WorkflowsApi(api_client)
+    api_instance = uncertainty_engine_resource_client.WorkflowsApi(api_client)
     project_id = 'project_id_example' # str | 
-    post_workflow_record_request = uncertainty-engine-resource-client.PostWorkflowRecordRequest() # PostWorkflowRecordRequest | 
+    post_workflow_record_request = uncertainty_engine_resource_client.PostWorkflowRecordRequest() # PostWorkflowRecordRequest | 
 
     try:
         # Post Workflow Record
@@ -596,26 +596,26 @@ Create a new workflow version.
 
 
 ```python
-import uncertainty-engine-resource-client
-from uncertainty-engine-resource-client.models.post_workflow_version_request import PostWorkflowVersionRequest
-from uncertainty-engine-resource-client.models.workflow_version_response import WorkflowVersionResponse
-from uncertainty-engine-resource-client.rest import ApiException
+import uncertainty_engine_resource_client
+from uncertainty_engine_resource_client.models.post_workflow_version_request import PostWorkflowVersionRequest
+from uncertainty_engine_resource_client.models.workflow_version_response import WorkflowVersionResponse
+from uncertainty_engine_resource_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://tu8vus047g.execute-api.eu-west-2.amazonaws.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = uncertainty-engine-resource-client.Configuration(
+configuration = uncertainty_engine_resource_client.Configuration(
     host = "https://tu8vus047g.execute-api.eu-west-2.amazonaws.com"
 )
 
 
 # Enter a context with an instance of the API client
-async with uncertainty-engine-resource-client.ApiClient(configuration) as api_client:
+async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = uncertainty-engine-resource-client.WorkflowsApi(api_client)
+    api_instance = uncertainty_engine_resource_client.WorkflowsApi(api_client)
     project_id = 'project_id_example' # str | 
     workflow_id = 'workflow_id_example' # str | 
-    post_workflow_version_request = uncertainty-engine-resource-client.PostWorkflowVersionRequest() # PostWorkflowVersionRequest | 
+    post_workflow_version_request = uncertainty_engine_resource_client.PostWorkflowVersionRequest() # PostWorkflowVersionRequest | 
 
     try:
         # Post Workflow Version
@@ -670,26 +670,26 @@ Update a workflow version. Can update either the workflow content, the version r
 
 
 ```python
-import uncertainty-engine-resource-client
-from uncertainty-engine-resource-client.models.update_workflow_version_request import UpdateWorkflowVersionRequest
-from uncertainty-engine-resource-client.rest import ApiException
+import uncertainty_engine_resource_client
+from uncertainty_engine_resource_client.models.update_workflow_version_request import UpdateWorkflowVersionRequest
+from uncertainty_engine_resource_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://tu8vus047g.execute-api.eu-west-2.amazonaws.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = uncertainty-engine-resource-client.Configuration(
+configuration = uncertainty_engine_resource_client.Configuration(
     host = "https://tu8vus047g.execute-api.eu-west-2.amazonaws.com"
 )
 
 
 # Enter a context with an instance of the API client
-async with uncertainty-engine-resource-client.ApiClient(configuration) as api_client:
+async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = uncertainty-engine-resource-client.WorkflowsApi(api_client)
+    api_instance = uncertainty_engine_resource_client.WorkflowsApi(api_client)
     project_id = 'project_id_example' # str | 
     workflow_id = 'workflow_id_example' # str | 
     workflow_version_id = 'workflow_version_id_example' # str | 
-    update_workflow_version_request = uncertainty-engine-resource-client.UpdateWorkflowVersionRequest() # UpdateWorkflowVersionRequest | 
+    update_workflow_version_request = uncertainty_engine_resource_client.UpdateWorkflowVersionRequest() # UpdateWorkflowVersionRequest | 
 
     try:
         # Put Workflow Version

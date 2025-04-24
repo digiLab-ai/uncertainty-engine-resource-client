@@ -14,7 +14,7 @@
 
 import unittest
 
-from my_api_client.api.default_api import DefaultApi
+from uncertainty_engine_resource_client.api.default_api import DefaultApi
 
 
 class TestDefaultApi(unittest.IsolatedAsyncioTestCase):

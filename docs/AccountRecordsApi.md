@@ -1,4 +1,4 @@
-# uncertainty-engine-resource-client.AccountRecordsApi
+# uncertainty_engine_resource_client.AccountRecordsApi
 
 All URIs are relative to *https://tu8vus047g.execute-api.eu-west-2.amazonaws.com*
 
@@ -21,21 +21,21 @@ Delete an account.
 
 
 ```python
-import uncertainty-engine-resource-client
-from uncertainty-engine-resource-client.rest import ApiException
+import uncertainty_engine_resource_client
+from uncertainty_engine_resource_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://tu8vus047g.execute-api.eu-west-2.amazonaws.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = uncertainty-engine-resource-client.Configuration(
+configuration = uncertainty_engine_resource_client.Configuration(
     host = "https://tu8vus047g.execute-api.eu-west-2.amazonaws.com"
 )
 
 
 # Enter a context with an instance of the API client
-async with uncertainty-engine-resource-client.ApiClient(configuration) as api_client:
+async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = uncertainty-engine-resource-client.AccountRecordsApi(api_client)
+    api_instance = uncertainty_engine_resource_client.AccountRecordsApi(api_client)
     account_id = 'account_id_example' # str | 
 
     try:
@@ -89,22 +89,22 @@ Get a single account record.
 
 
 ```python
-import uncertainty-engine-resource-client
-from uncertainty-engine-resource-client.models.account_response import AccountResponse
-from uncertainty-engine-resource-client.rest import ApiException
+import uncertainty_engine_resource_client
+from uncertainty_engine_resource_client.models.account_response import AccountResponse
+from uncertainty_engine_resource_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://tu8vus047g.execute-api.eu-west-2.amazonaws.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = uncertainty-engine-resource-client.Configuration(
+configuration = uncertainty_engine_resource_client.Configuration(
     host = "https://tu8vus047g.execute-api.eu-west-2.amazonaws.com"
 )
 
 
 # Enter a context with an instance of the API client
-async with uncertainty-engine-resource-client.ApiClient(configuration) as api_client:
+async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = uncertainty-engine-resource-client.AccountRecordsApi(api_client)
+    api_instance = uncertainty_engine_resource_client.AccountRecordsApi(api_client)
     account_id = 'account_id_example' # str | 
 
     try:
@@ -158,22 +158,22 @@ Get all projects for an account.
 
 
 ```python
-import uncertainty-engine-resource-client
-from uncertainty-engine-resource-client.models.get_account_record_projects_response import GetAccountRecordProjectsResponse
-from uncertainty-engine-resource-client.rest import ApiException
+import uncertainty_engine_resource_client
+from uncertainty_engine_resource_client.models.get_account_record_projects_response import GetAccountRecordProjectsResponse
+from uncertainty_engine_resource_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://tu8vus047g.execute-api.eu-west-2.amazonaws.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = uncertainty-engine-resource-client.Configuration(
+configuration = uncertainty_engine_resource_client.Configuration(
     host = "https://tu8vus047g.execute-api.eu-west-2.amazonaws.com"
 )
 
 
 # Enter a context with an instance of the API client
-async with uncertainty-engine-resource-client.ApiClient(configuration) as api_client:
+async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = uncertainty-engine-resource-client.AccountRecordsApi(api_client)
+    api_instance = uncertainty_engine_resource_client.AccountRecordsApi(api_client)
     account_id = 'account_id_example' # str | 
 
     try:
@@ -227,24 +227,24 @@ Create a new account.
 
 
 ```python
-import uncertainty-engine-resource-client
-from uncertainty-engine-resource-client.models.account_response import AccountResponse
-from uncertainty-engine-resource-client.models.post_account_record_request import PostAccountRecordRequest
-from uncertainty-engine-resource-client.rest import ApiException
+import uncertainty_engine_resource_client
+from uncertainty_engine_resource_client.models.account_response import AccountResponse
+from uncertainty_engine_resource_client.models.post_account_record_request import PostAccountRecordRequest
+from uncertainty_engine_resource_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://tu8vus047g.execute-api.eu-west-2.amazonaws.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = uncertainty-engine-resource-client.Configuration(
+configuration = uncertainty_engine_resource_client.Configuration(
     host = "https://tu8vus047g.execute-api.eu-west-2.amazonaws.com"
 )
 
 
 # Enter a context with an instance of the API client
-async with uncertainty-engine-resource-client.ApiClient(configuration) as api_client:
+async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = uncertainty-engine-resource-client.AccountRecordsApi(api_client)
-    post_account_record_request = uncertainty-engine-resource-client.PostAccountRecordRequest() # PostAccountRecordRequest | 
+    api_instance = uncertainty_engine_resource_client.AccountRecordsApi(api_client)
+    post_account_record_request = uncertainty_engine_resource_client.PostAccountRecordRequest() # PostAccountRecordRequest | 
 
     try:
         # Post Account Record
