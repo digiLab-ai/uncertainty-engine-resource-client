@@ -41,7 +41,7 @@ class TemplatesApi:
 
 
     @validate_call
-    async def delete_workflow_template(
+    def delete_workflow_template(
         self,
         workflow_template_id: StrictStr,
         _request_timeout: Union[
@@ -96,11 +96,11 @@ class TemplatesApi:
             '200': "object",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -108,7 +108,7 @@ class TemplatesApi:
 
 
     @validate_call
-    async def delete_workflow_template_with_http_info(
+    def delete_workflow_template_with_http_info(
         self,
         workflow_template_id: StrictStr,
         _request_timeout: Union[
@@ -163,11 +163,11 @@ class TemplatesApi:
             '200': "object",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -175,7 +175,7 @@ class TemplatesApi:
 
 
     @validate_call
-    async def delete_workflow_template_without_preload_content(
+    def delete_workflow_template_without_preload_content(
         self,
         workflow_template_id: StrictStr,
         _request_timeout: Union[
@@ -230,7 +230,7 @@ class TemplatesApi:
             '200': "object",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -301,7 +301,7 @@ class TemplatesApi:
 
 
     @validate_call
-    async def get_workflow_template_record(
+    def get_workflow_template_record(
         self,
         workflow_template_id: StrictStr,
         _request_timeout: Union[
@@ -356,11 +356,11 @@ class TemplatesApi:
             '200': "WorkflowTemplateResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -368,7 +368,7 @@ class TemplatesApi:
 
 
     @validate_call
-    async def get_workflow_template_record_with_http_info(
+    def get_workflow_template_record_with_http_info(
         self,
         workflow_template_id: StrictStr,
         _request_timeout: Union[
@@ -423,11 +423,11 @@ class TemplatesApi:
             '200': "WorkflowTemplateResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -435,7 +435,7 @@ class TemplatesApi:
 
 
     @validate_call
-    async def get_workflow_template_record_without_preload_content(
+    def get_workflow_template_record_without_preload_content(
         self,
         workflow_template_id: StrictStr,
         _request_timeout: Union[
@@ -490,7 +490,7 @@ class TemplatesApi:
             '200': "WorkflowTemplateResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -561,7 +561,7 @@ class TemplatesApi:
 
 
     @validate_call
-    async def get_workflow_template_records(
+    def get_workflow_template_records(
         self,
         _request_timeout: Union[
             None,
@@ -611,11 +611,11 @@ class TemplatesApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "GetWorkflowTemplateRecordsResponse",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -623,7 +623,7 @@ class TemplatesApi:
 
 
     @validate_call
-    async def get_workflow_template_records_with_http_info(
+    def get_workflow_template_records_with_http_info(
         self,
         _request_timeout: Union[
             None,
@@ -673,11 +673,11 @@ class TemplatesApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "GetWorkflowTemplateRecordsResponse",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -685,7 +685,7 @@ class TemplatesApi:
 
 
     @validate_call
-    async def get_workflow_template_records_without_preload_content(
+    def get_workflow_template_records_without_preload_content(
         self,
         _request_timeout: Union[
             None,
@@ -735,7 +735,7 @@ class TemplatesApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "GetWorkflowTemplateRecordsResponse",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -803,7 +803,7 @@ class TemplatesApi:
 
 
     @validate_call
-    async def workflow_template(
+    def workflow_template(
         self,
         post_workflow_template_record_request: PostWorkflowTemplateRecordRequest,
         _request_timeout: Union[
@@ -858,11 +858,11 @@ class TemplatesApi:
             '200': "WorkflowTemplateResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -870,7 +870,7 @@ class TemplatesApi:
 
 
     @validate_call
-    async def workflow_template_with_http_info(
+    def workflow_template_with_http_info(
         self,
         post_workflow_template_record_request: PostWorkflowTemplateRecordRequest,
         _request_timeout: Union[
@@ -925,11 +925,11 @@ class TemplatesApi:
             '200': "WorkflowTemplateResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -937,7 +937,7 @@ class TemplatesApi:
 
 
     @validate_call
-    async def workflow_template_without_preload_content(
+    def workflow_template_without_preload_content(
         self,
         post_workflow_template_record_request: PostWorkflowTemplateRecordRequest,
         _request_timeout: Union[
@@ -992,7 +992,7 @@ class TemplatesApi:
             '200': "WorkflowTemplateResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )

@@ -10,7 +10,7 @@ gitUserId: digiLab-ai # User ID for the git repository
 minimalUpdate: true  # Only write files that have changed
 
 additionalProperties:
-  library: asyncio  # Use asyncio for async support
+  library: urllib3  # Use asyncio for async support
 
 globalProperties:
   modelTests: "false" # Disable generation of model tests

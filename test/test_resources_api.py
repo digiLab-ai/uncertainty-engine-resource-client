@@ -17,86 +17,86 @@ import unittest
 from uncertainty_engine_resource_client.api.resources_api import ResourcesApi
 
 
-class TestResourcesApi(unittest.IsolatedAsyncioTestCase):
+class TestResourcesApi(unittest.TestCase):
     """ResourcesApi unit test stubs"""
 
-    async def asyncSetUp(self) -> None:
+    def setUp(self) -> None:
         self.api = ResourcesApi()
 
-    async def asyncTearDown(self) -> None:
-        await self.api.api_client.close()
+    def tearDown(self) -> None:
+        pass
 
-    async def test_delete_resource_record(self) -> None:
+    def test_delete_resource_record(self) -> None:
         """Test case for delete_resource_record
 
         Delete Resource
         """
         pass
 
-    async def test_delete_resource_version_record(self) -> None:
+    def test_delete_resource_version_record(self) -> None:
         """Test case for delete_resource_version_record
 
         Delete Resource Version
         """
         pass
 
-    async def test_get_latest_resource_version(self) -> None:
+    def test_get_latest_resource_version(self) -> None:
         """Test case for get_latest_resource_version
 
         Get Latest Resource Version
         """
         pass
 
-    async def test_get_project_resource_records(self) -> None:
+    def test_get_project_resource_records(self) -> None:
         """Test case for get_project_resource_records
 
         Get Project Resource Records
         """
         pass
 
-    async def test_get_resource_record(self) -> None:
+    def test_get_resource_record(self) -> None:
         """Test case for get_resource_record
 
         Get Resource Record
         """
         pass
 
-    async def test_get_resource_version(self) -> None:
+    def test_get_resource_version(self) -> None:
         """Test case for get_resource_version
 
         Get Resource Version
         """
         pass
 
-    async def test_get_resource_version_records(self) -> None:
+    def test_get_resource_version_records(self) -> None:
         """Test case for get_resource_version_records
 
         Get Resource Version Records
         """
         pass
 
-    async def test_patch_resource_version(self) -> None:
+    def test_patch_resource_version(self) -> None:
         """Test case for patch_resource_version
 
         Patch Resource Version
         """
         pass
 
-    async def test_post_resource_record(self) -> None:
+    def test_post_resource_record(self) -> None:
         """Test case for post_resource_record
 
         Post Resource Record
         """
         pass
 
-    async def test_post_resource_version(self) -> None:
+    def test_post_resource_version(self) -> None:
         """Test case for post_resource_version
 
         Post Resource Version
         """
         pass
 
-    async def test_put_upload_resource_version(self) -> None:
+    def test_put_upload_resource_version(self) -> None:
         """Test case for put_upload_resource_version
 
         Put Upload Resource Version

@@ -41,7 +41,7 @@ class AccountRecordsApi:
 
 
     @validate_call
-    async def delete_account_record(
+    def delete_account_record(
         self,
         account_id: StrictStr,
         _request_timeout: Union[
@@ -97,11 +97,11 @@ class AccountRecordsApi:
             '200': "object",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -109,7 +109,7 @@ class AccountRecordsApi:
 
 
     @validate_call
-    async def delete_account_record_with_http_info(
+    def delete_account_record_with_http_info(
         self,
         account_id: StrictStr,
         _request_timeout: Union[
@@ -165,11 +165,11 @@ class AccountRecordsApi:
             '200': "object",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -177,7 +177,7 @@ class AccountRecordsApi:
 
 
     @validate_call
-    async def delete_account_record_without_preload_content(
+    def delete_account_record_without_preload_content(
         self,
         account_id: StrictStr,
         _request_timeout: Union[
@@ -233,7 +233,7 @@ class AccountRecordsApi:
             '200': "object",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -304,7 +304,7 @@ class AccountRecordsApi:
 
 
     @validate_call
-    async def get_account_record(
+    def get_account_record(
         self,
         account_id: StrictStr,
         _request_timeout: Union[
@@ -360,11 +360,11 @@ class AccountRecordsApi:
             '200': "AccountResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -372,7 +372,7 @@ class AccountRecordsApi:
 
 
     @validate_call
-    async def get_account_record_with_http_info(
+    def get_account_record_with_http_info(
         self,
         account_id: StrictStr,
         _request_timeout: Union[
@@ -428,11 +428,11 @@ class AccountRecordsApi:
             '200': "AccountResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -440,7 +440,7 @@ class AccountRecordsApi:
 
 
     @validate_call
-    async def get_account_record_without_preload_content(
+    def get_account_record_without_preload_content(
         self,
         account_id: StrictStr,
         _request_timeout: Union[
@@ -496,7 +496,7 @@ class AccountRecordsApi:
             '200': "AccountResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -567,7 +567,7 @@ class AccountRecordsApi:
 
 
     @validate_call
-    async def get_account_record_projects(
+    def get_account_record_projects(
         self,
         account_id: StrictStr,
         _request_timeout: Union[
@@ -623,11 +623,11 @@ class AccountRecordsApi:
             '200': "GetAccountRecordProjectsResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -635,7 +635,7 @@ class AccountRecordsApi:
 
 
     @validate_call
-    async def get_account_record_projects_with_http_info(
+    def get_account_record_projects_with_http_info(
         self,
         account_id: StrictStr,
         _request_timeout: Union[
@@ -691,11 +691,11 @@ class AccountRecordsApi:
             '200': "GetAccountRecordProjectsResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -703,7 +703,7 @@ class AccountRecordsApi:
 
 
     @validate_call
-    async def get_account_record_projects_without_preload_content(
+    def get_account_record_projects_without_preload_content(
         self,
         account_id: StrictStr,
         _request_timeout: Union[
@@ -759,7 +759,7 @@ class AccountRecordsApi:
             '200': "GetAccountRecordProjectsResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -830,7 +830,7 @@ class AccountRecordsApi:
 
 
     @validate_call
-    async def post_account_record(
+    def post_account_record(
         self,
         post_account_record_request: PostAccountRecordRequest,
         _request_timeout: Union[
@@ -886,11 +886,11 @@ class AccountRecordsApi:
             '200': "AccountResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -898,7 +898,7 @@ class AccountRecordsApi:
 
 
     @validate_call
-    async def post_account_record_with_http_info(
+    def post_account_record_with_http_info(
         self,
         post_account_record_request: PostAccountRecordRequest,
         _request_timeout: Union[
@@ -954,11 +954,11 @@ class AccountRecordsApi:
             '200': "AccountResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -966,7 +966,7 @@ class AccountRecordsApi:
 
 
     @validate_call
-    async def post_account_record_without_preload_content(
+    def post_account_record_without_preload_content(
         self,
         post_account_record_request: PostAccountRecordRequest,
         _request_timeout: Union[
@@ -1022,7 +1022,7 @@ class AccountRecordsApi:
             '200': "AccountResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )

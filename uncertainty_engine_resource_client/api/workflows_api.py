@@ -45,7 +45,7 @@ class WorkflowsApi:
 
 
     @validate_call
-    async def delete_workflow_record(
+    def delete_workflow_record(
         self,
         project_id: StrictStr,
         workflow_id: StrictStr,
@@ -105,11 +105,11 @@ class WorkflowsApi:
             '200': "object",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -117,7 +117,7 @@ class WorkflowsApi:
 
 
     @validate_call
-    async def delete_workflow_record_with_http_info(
+    def delete_workflow_record_with_http_info(
         self,
         project_id: StrictStr,
         workflow_id: StrictStr,
@@ -177,11 +177,11 @@ class WorkflowsApi:
             '200': "object",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -189,7 +189,7 @@ class WorkflowsApi:
 
 
     @validate_call
-    async def delete_workflow_record_without_preload_content(
+    def delete_workflow_record_without_preload_content(
         self,
         project_id: StrictStr,
         workflow_id: StrictStr,
@@ -249,7 +249,7 @@ class WorkflowsApi:
             '200': "object",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -323,7 +323,7 @@ class WorkflowsApi:
 
 
     @validate_call
-    async def delete_workflow_version_record(
+    def delete_workflow_version_record(
         self,
         project_id: StrictStr,
         workflow_id: StrictStr,
@@ -387,11 +387,11 @@ class WorkflowsApi:
             '200': "object",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -399,7 +399,7 @@ class WorkflowsApi:
 
 
     @validate_call
-    async def delete_workflow_version_record_with_http_info(
+    def delete_workflow_version_record_with_http_info(
         self,
         project_id: StrictStr,
         workflow_id: StrictStr,
@@ -463,11 +463,11 @@ class WorkflowsApi:
             '200': "object",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -475,7 +475,7 @@ class WorkflowsApi:
 
 
     @validate_call
-    async def delete_workflow_version_record_without_preload_content(
+    def delete_workflow_version_record_without_preload_content(
         self,
         project_id: StrictStr,
         workflow_id: StrictStr,
@@ -539,7 +539,7 @@ class WorkflowsApi:
             '200': "object",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -616,7 +616,7 @@ class WorkflowsApi:
 
 
     @validate_call
-    async def get_latest_workflow_version(
+    def get_latest_workflow_version(
         self,
         project_id: StrictStr,
         workflow_id: StrictStr,
@@ -676,11 +676,11 @@ class WorkflowsApi:
             '200': "WorkflowVersionResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -688,7 +688,7 @@ class WorkflowsApi:
 
 
     @validate_call
-    async def get_latest_workflow_version_with_http_info(
+    def get_latest_workflow_version_with_http_info(
         self,
         project_id: StrictStr,
         workflow_id: StrictStr,
@@ -748,11 +748,11 @@ class WorkflowsApi:
             '200': "WorkflowVersionResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -760,7 +760,7 @@ class WorkflowsApi:
 
 
     @validate_call
-    async def get_latest_workflow_version_without_preload_content(
+    def get_latest_workflow_version_without_preload_content(
         self,
         project_id: StrictStr,
         workflow_id: StrictStr,
@@ -820,7 +820,7 @@ class WorkflowsApi:
             '200': "WorkflowVersionResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -894,7 +894,7 @@ class WorkflowsApi:
 
 
     @validate_call
-    async def get_project_workflow_records(
+    def get_project_workflow_records(
         self,
         project_id: StrictStr,
         _request_timeout: Union[
@@ -950,11 +950,11 @@ class WorkflowsApi:
             '200': "GetWorkflowRecordsResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -962,7 +962,7 @@ class WorkflowsApi:
 
 
     @validate_call
-    async def get_project_workflow_records_with_http_info(
+    def get_project_workflow_records_with_http_info(
         self,
         project_id: StrictStr,
         _request_timeout: Union[
@@ -1018,11 +1018,11 @@ class WorkflowsApi:
             '200': "GetWorkflowRecordsResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1030,7 +1030,7 @@ class WorkflowsApi:
 
 
     @validate_call
-    async def get_project_workflow_records_without_preload_content(
+    def get_project_workflow_records_without_preload_content(
         self,
         project_id: StrictStr,
         _request_timeout: Union[
@@ -1086,7 +1086,7 @@ class WorkflowsApi:
             '200': "GetWorkflowRecordsResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1157,7 +1157,7 @@ class WorkflowsApi:
 
 
     @validate_call
-    async def get_workflow_record(
+    def get_workflow_record(
         self,
         project_id: StrictStr,
         workflow_id: StrictStr,
@@ -1217,11 +1217,11 @@ class WorkflowsApi:
             '200': "WorkflowResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1229,7 +1229,7 @@ class WorkflowsApi:
 
 
     @validate_call
-    async def get_workflow_record_with_http_info(
+    def get_workflow_record_with_http_info(
         self,
         project_id: StrictStr,
         workflow_id: StrictStr,
@@ -1289,11 +1289,11 @@ class WorkflowsApi:
             '200': "WorkflowResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1301,7 +1301,7 @@ class WorkflowsApi:
 
 
     @validate_call
-    async def get_workflow_record_without_preload_content(
+    def get_workflow_record_without_preload_content(
         self,
         project_id: StrictStr,
         workflow_id: StrictStr,
@@ -1361,7 +1361,7 @@ class WorkflowsApi:
             '200': "WorkflowResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1435,7 +1435,7 @@ class WorkflowsApi:
 
 
     @validate_call
-    async def get_workflow_version(
+    def get_workflow_version(
         self,
         project_id: StrictStr,
         workflow_id: StrictStr,
@@ -1499,11 +1499,11 @@ class WorkflowsApi:
             '200': "WorkflowVersionResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1511,7 +1511,7 @@ class WorkflowsApi:
 
 
     @validate_call
-    async def get_workflow_version_with_http_info(
+    def get_workflow_version_with_http_info(
         self,
         project_id: StrictStr,
         workflow_id: StrictStr,
@@ -1575,11 +1575,11 @@ class WorkflowsApi:
             '200': "WorkflowVersionResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1587,7 +1587,7 @@ class WorkflowsApi:
 
 
     @validate_call
-    async def get_workflow_version_without_preload_content(
+    def get_workflow_version_without_preload_content(
         self,
         project_id: StrictStr,
         workflow_id: StrictStr,
@@ -1651,7 +1651,7 @@ class WorkflowsApi:
             '200': "WorkflowVersionResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1728,7 +1728,7 @@ class WorkflowsApi:
 
 
     @validate_call
-    async def get_workflow_version_records(
+    def get_workflow_version_records(
         self,
         project_id: StrictStr,
         workflow_id: StrictStr,
@@ -1788,11 +1788,11 @@ class WorkflowsApi:
             '200': "GetWorkflowVersionRecordsResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1800,7 +1800,7 @@ class WorkflowsApi:
 
 
     @validate_call
-    async def get_workflow_version_records_with_http_info(
+    def get_workflow_version_records_with_http_info(
         self,
         project_id: StrictStr,
         workflow_id: StrictStr,
@@ -1860,11 +1860,11 @@ class WorkflowsApi:
             '200': "GetWorkflowVersionRecordsResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1872,7 +1872,7 @@ class WorkflowsApi:
 
 
     @validate_call
-    async def get_workflow_version_records_without_preload_content(
+    def get_workflow_version_records_without_preload_content(
         self,
         project_id: StrictStr,
         workflow_id: StrictStr,
@@ -1932,7 +1932,7 @@ class WorkflowsApi:
             '200': "GetWorkflowVersionRecordsResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -2006,7 +2006,7 @@ class WorkflowsApi:
 
 
     @validate_call
-    async def post_workflow_record(
+    def post_workflow_record(
         self,
         project_id: StrictStr,
         post_workflow_record_request: PostWorkflowRecordRequest,
@@ -2066,11 +2066,11 @@ class WorkflowsApi:
             '200': "WorkflowResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -2078,7 +2078,7 @@ class WorkflowsApi:
 
 
     @validate_call
-    async def post_workflow_record_with_http_info(
+    def post_workflow_record_with_http_info(
         self,
         project_id: StrictStr,
         post_workflow_record_request: PostWorkflowRecordRequest,
@@ -2138,11 +2138,11 @@ class WorkflowsApi:
             '200': "WorkflowResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -2150,7 +2150,7 @@ class WorkflowsApi:
 
 
     @validate_call
-    async def post_workflow_record_without_preload_content(
+    def post_workflow_record_without_preload_content(
         self,
         project_id: StrictStr,
         post_workflow_record_request: PostWorkflowRecordRequest,
@@ -2210,7 +2210,7 @@ class WorkflowsApi:
             '200': "WorkflowResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -2297,7 +2297,7 @@ class WorkflowsApi:
 
 
     @validate_call
-    async def post_workflow_version(
+    def post_workflow_version(
         self,
         project_id: StrictStr,
         workflow_id: StrictStr,
@@ -2361,11 +2361,11 @@ class WorkflowsApi:
             '200': "WorkflowVersionResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -2373,7 +2373,7 @@ class WorkflowsApi:
 
 
     @validate_call
-    async def post_workflow_version_with_http_info(
+    def post_workflow_version_with_http_info(
         self,
         project_id: StrictStr,
         workflow_id: StrictStr,
@@ -2437,11 +2437,11 @@ class WorkflowsApi:
             '200': "WorkflowVersionResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -2449,7 +2449,7 @@ class WorkflowsApi:
 
 
     @validate_call
-    async def post_workflow_version_without_preload_content(
+    def post_workflow_version_without_preload_content(
         self,
         project_id: StrictStr,
         workflow_id: StrictStr,
@@ -2513,7 +2513,7 @@ class WorkflowsApi:
             '200': "WorkflowVersionResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -2603,7 +2603,7 @@ class WorkflowsApi:
 
 
     @validate_call
-    async def put_workflow_version(
+    def put_workflow_version(
         self,
         project_id: StrictStr,
         workflow_id: StrictStr,
@@ -2671,11 +2671,11 @@ class WorkflowsApi:
             '200': "object",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -2683,7 +2683,7 @@ class WorkflowsApi:
 
 
     @validate_call
-    async def put_workflow_version_with_http_info(
+    def put_workflow_version_with_http_info(
         self,
         project_id: StrictStr,
         workflow_id: StrictStr,
@@ -2751,11 +2751,11 @@ class WorkflowsApi:
             '200': "object",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -2763,7 +2763,7 @@ class WorkflowsApi:
 
 
     @validate_call
-    async def put_workflow_version_without_preload_content(
+    def put_workflow_version_without_preload_content(
         self,
         project_id: StrictStr,
         workflow_id: StrictStr,
@@ -2831,7 +2831,7 @@ class WorkflowsApi:
             '200': "object",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )

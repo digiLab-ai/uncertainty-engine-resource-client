@@ -42,13 +42,13 @@ configuration = uncertainty_engine_resource_client.Configuration(
 )
 
 # Enter a context with an instance of the API client
-async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
+with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = uncertainty_engine_resource_client.AuthApi(api_client)
 
     try:
         # Get Tokens
-        api_response = await api_instance.get_tokens()
+        api_response = api_instance.get_tokens()
         print("The response of AuthApi->get_tokens:\n")
         pprint(api_response)
     except Exception as e:
@@ -116,13 +116,13 @@ configuration = uncertainty_engine_resource_client.Configuration(
 )
 
 # Enter a context with an instance of the API client
-async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
+with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = uncertainty_engine_resource_client.AuthApi(api_client)
 
     try:
         # Refresh Token
-        api_response = await api_instance.refresh_token()
+        api_response = api_instance.refresh_token()
         print("The response of AuthApi->refresh_token:\n")
         pprint(api_response)
     except Exception as e:

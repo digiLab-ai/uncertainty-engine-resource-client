@@ -17,30 +17,30 @@ import unittest
 from uncertainty_engine_resource_client.api.project_records_api import ProjectRecordsApi
 
 
-class TestProjectRecordsApi(unittest.IsolatedAsyncioTestCase):
+class TestProjectRecordsApi(unittest.TestCase):
     """ProjectRecordsApi unit test stubs"""
 
-    async def asyncSetUp(self) -> None:
+    def setUp(self) -> None:
         self.api = ProjectRecordsApi()
 
-    async def asyncTearDown(self) -> None:
-        await self.api.api_client.close()
+    def tearDown(self) -> None:
+        pass
 
-    async def test_delete_project_record(self) -> None:
+    def test_delete_project_record(self) -> None:
         """Test case for delete_project_record
 
         Delete Project Record
         """
         pass
 
-    async def test_get_project_record_id(self) -> None:
+    def test_get_project_record_id(self) -> None:
         """Test case for get_project_record_id
 
         Get Project Record Id
         """
         pass
 
-    async def test_post_project_record(self) -> None:
+    def test_post_project_record(self) -> None:
         """Test case for post_project_record
 
         Post Project Record

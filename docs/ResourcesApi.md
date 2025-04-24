@@ -43,7 +43,7 @@ configuration = uncertainty_engine_resource_client.Configuration(
 
 
 # Enter a context with an instance of the API client
-async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
+with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = uncertainty_engine_resource_client.ResourcesApi(api_client)
     project_id = 'project_id_example' # str | 
@@ -52,7 +52,7 @@ async with uncertainty_engine_resource_client.ApiClient(configuration) as api_cl
 
     try:
         # Delete Resource
-        api_response = await api_instance.delete_resource_record(project_id, resource_type, resource_id)
+        api_response = api_instance.delete_resource_record(project_id, resource_type, resource_id)
         print("The response of ResourcesApi->delete_resource_record:\n")
         pprint(api_response)
     except Exception as e:
@@ -118,7 +118,7 @@ configuration = uncertainty_engine_resource_client.Configuration(
 
 
 # Enter a context with an instance of the API client
-async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
+with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = uncertainty_engine_resource_client.ResourcesApi(api_client)
     project_id = 'project_id_example' # str | 
@@ -128,7 +128,7 @@ async with uncertainty_engine_resource_client.ApiClient(configuration) as api_cl
 
     try:
         # Delete Resource Version
-        api_response = await api_instance.delete_resource_version_record(project_id, resource_type, resource_id, resource_version_id)
+        api_response = api_instance.delete_resource_version_record(project_id, resource_type, resource_id, resource_version_id)
         print("The response of ResourcesApi->delete_resource_version_record:\n")
         pprint(api_response)
     except Exception as e:
@@ -196,7 +196,7 @@ configuration = uncertainty_engine_resource_client.Configuration(
 
 
 # Enter a context with an instance of the API client
-async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
+with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = uncertainty_engine_resource_client.ResourcesApi(api_client)
     project_id = 'project_id_example' # str | 
@@ -205,7 +205,7 @@ async with uncertainty_engine_resource_client.ApiClient(configuration) as api_cl
 
     try:
         # Get Latest Resource Version
-        api_response = await api_instance.get_latest_resource_version(project_id, resource_type, resource_id)
+        api_response = api_instance.get_latest_resource_version(project_id, resource_type, resource_id)
         print("The response of ResourcesApi->get_latest_resource_version:\n")
         pprint(api_response)
     except Exception as e:
@@ -273,7 +273,7 @@ configuration = uncertainty_engine_resource_client.Configuration(
 
 
 # Enter a context with an instance of the API client
-async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
+with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = uncertainty_engine_resource_client.ResourcesApi(api_client)
     project_id = 'project_id_example' # str | 
@@ -281,7 +281,7 @@ async with uncertainty_engine_resource_client.ApiClient(configuration) as api_cl
 
     try:
         # Get Project Resource Records
-        api_response = await api_instance.get_project_resource_records(project_id, resource_type)
+        api_response = api_instance.get_project_resource_records(project_id, resource_type)
         print("The response of ResourcesApi->get_project_resource_records:\n")
         pprint(api_response)
     except Exception as e:
@@ -347,7 +347,7 @@ configuration = uncertainty_engine_resource_client.Configuration(
 
 
 # Enter a context with an instance of the API client
-async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
+with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = uncertainty_engine_resource_client.ResourcesApi(api_client)
     project_id = 'project_id_example' # str | 
@@ -356,7 +356,7 @@ async with uncertainty_engine_resource_client.ApiClient(configuration) as api_cl
 
     try:
         # Get Resource Record
-        api_response = await api_instance.get_resource_record(project_id, resource_type, resource_id)
+        api_response = api_instance.get_resource_record(project_id, resource_type, resource_id)
         print("The response of ResourcesApi->get_resource_record:\n")
         pprint(api_response)
     except Exception as e:
@@ -420,7 +420,7 @@ configuration = uncertainty_engine_resource_client.Configuration(
 
 
 # Enter a context with an instance of the API client
-async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
+with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = uncertainty_engine_resource_client.ResourcesApi(api_client)
     project_id = 'project_id_example' # str | 
@@ -430,7 +430,7 @@ async with uncertainty_engine_resource_client.ApiClient(configuration) as api_cl
 
     try:
         # Get Resource Version
-        api_response = await api_instance.get_resource_version(project_id, resource_type, resource_id, resource_version_id)
+        api_response = api_instance.get_resource_version(project_id, resource_type, resource_id, resource_version_id)
         print("The response of ResourcesApi->get_resource_version:\n")
         pprint(api_response)
     except Exception as e:
@@ -500,7 +500,7 @@ configuration = uncertainty_engine_resource_client.Configuration(
 
 
 # Enter a context with an instance of the API client
-async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
+with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = uncertainty_engine_resource_client.ResourcesApi(api_client)
     project_id = 'project_id_example' # str | 
@@ -509,7 +509,7 @@ async with uncertainty_engine_resource_client.ApiClient(configuration) as api_cl
 
     try:
         # Get Resource Version Records
-        api_response = await api_instance.get_resource_version_records(project_id, resource_type, resource_id)
+        api_response = api_instance.get_resource_version_records(project_id, resource_type, resource_id)
         print("The response of ResourcesApi->get_resource_version_records:\n")
         pprint(api_response)
     except Exception as e:
@@ -571,7 +571,7 @@ configuration = uncertainty_engine_resource_client.Configuration(
 
 
 # Enter a context with an instance of the API client
-async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
+with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = uncertainty_engine_resource_client.ResourcesApi(api_client)
     project_id = 'project_id_example' # str | 
@@ -582,7 +582,7 @@ async with uncertainty_engine_resource_client.ApiClient(configuration) as api_cl
 
     try:
         # Patch Resource Version
-        api_response = await api_instance.patch_resource_version(project_id, resource_type, resource_id, resource_version_id, patch_resource_version_request)
+        api_response = api_instance.patch_resource_version(project_id, resource_type, resource_id, resource_version_id, patch_resource_version_request)
         print("The response of ResourcesApi->patch_resource_version:\n")
         pprint(api_response)
     except Exception as e:
@@ -653,7 +653,7 @@ configuration = uncertainty_engine_resource_client.Configuration(
 
 
 # Enter a context with an instance of the API client
-async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
+with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = uncertainty_engine_resource_client.ResourcesApi(api_client)
     project_id = 'project_id_example' # str | 
@@ -662,7 +662,7 @@ async with uncertainty_engine_resource_client.ApiClient(configuration) as api_cl
 
     try:
         # Post Resource Record
-        api_response = await api_instance.post_resource_record(project_id, resource_type, post_resource_record_request)
+        api_response = api_instance.post_resource_record(project_id, resource_type, post_resource_record_request)
         print("The response of ResourcesApi->post_resource_record:\n")
         pprint(api_response)
     except Exception as e:
@@ -730,7 +730,7 @@ configuration = uncertainty_engine_resource_client.Configuration(
 
 
 # Enter a context with an instance of the API client
-async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
+with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = uncertainty_engine_resource_client.ResourcesApi(api_client)
     project_id = 'project_id_example' # str | 
@@ -740,7 +740,7 @@ async with uncertainty_engine_resource_client.ApiClient(configuration) as api_cl
 
     try:
         # Post Resource Version
-        api_response = await api_instance.post_resource_version(project_id, resource_type, resource_id, post_resource_version_request)
+        api_response = api_instance.post_resource_version(project_id, resource_type, resource_id, post_resource_version_request)
         print("The response of ResourcesApi->post_resource_version:\n")
         pprint(api_response)
     except Exception as e:
@@ -811,7 +811,7 @@ configuration = uncertainty_engine_resource_client.Configuration(
 
 
 # Enter a context with an instance of the API client
-async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
+with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = uncertainty_engine_resource_client.ResourcesApi(api_client)
     project_id = 'project_id_example' # str | 
@@ -821,7 +821,7 @@ async with uncertainty_engine_resource_client.ApiClient(configuration) as api_cl
 
     try:
         # Put Upload Resource Version
-        api_response = await api_instance.put_upload_resource_version(project_id, resource_type, resource_id, pending_record_id)
+        api_response = api_instance.put_upload_resource_version(project_id, resource_type, resource_id, pending_record_id)
         print("The response of ResourcesApi->put_upload_resource_version:\n")
         pprint(api_response)
     except Exception as e:

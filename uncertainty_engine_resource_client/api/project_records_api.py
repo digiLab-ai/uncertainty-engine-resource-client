@@ -40,7 +40,7 @@ class ProjectRecordsApi:
 
 
     @validate_call
-    async def delete_project_record(
+    def delete_project_record(
         self,
         project_id: StrictStr,
         _request_timeout: Union[
@@ -96,11 +96,11 @@ class ProjectRecordsApi:
             '200': "object",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -108,7 +108,7 @@ class ProjectRecordsApi:
 
 
     @validate_call
-    async def delete_project_record_with_http_info(
+    def delete_project_record_with_http_info(
         self,
         project_id: StrictStr,
         _request_timeout: Union[
@@ -164,11 +164,11 @@ class ProjectRecordsApi:
             '200': "object",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -176,7 +176,7 @@ class ProjectRecordsApi:
 
 
     @validate_call
-    async def delete_project_record_without_preload_content(
+    def delete_project_record_without_preload_content(
         self,
         project_id: StrictStr,
         _request_timeout: Union[
@@ -232,7 +232,7 @@ class ProjectRecordsApi:
             '200': "object",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -303,7 +303,7 @@ class ProjectRecordsApi:
 
 
     @validate_call
-    async def get_project_record_id(
+    def get_project_record_id(
         self,
         project_id: StrictStr,
         _request_timeout: Union[
@@ -359,11 +359,11 @@ class ProjectRecordsApi:
             '200': "ProjectResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -371,7 +371,7 @@ class ProjectRecordsApi:
 
 
     @validate_call
-    async def get_project_record_id_with_http_info(
+    def get_project_record_id_with_http_info(
         self,
         project_id: StrictStr,
         _request_timeout: Union[
@@ -427,11 +427,11 @@ class ProjectRecordsApi:
             '200': "ProjectResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -439,7 +439,7 @@ class ProjectRecordsApi:
 
 
     @validate_call
-    async def get_project_record_id_without_preload_content(
+    def get_project_record_id_without_preload_content(
         self,
         project_id: StrictStr,
         _request_timeout: Union[
@@ -495,7 +495,7 @@ class ProjectRecordsApi:
             '200': "ProjectResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -566,7 +566,7 @@ class ProjectRecordsApi:
 
 
     @validate_call
-    async def post_project_record(
+    def post_project_record(
         self,
         post_project_record_request: PostProjectRecordRequest,
         _request_timeout: Union[
@@ -622,11 +622,11 @@ class ProjectRecordsApi:
             '200': "ProjectResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -634,7 +634,7 @@ class ProjectRecordsApi:
 
 
     @validate_call
-    async def post_project_record_with_http_info(
+    def post_project_record_with_http_info(
         self,
         post_project_record_request: PostProjectRecordRequest,
         _request_timeout: Union[
@@ -690,11 +690,11 @@ class ProjectRecordsApi:
             '200': "ProjectResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -702,7 +702,7 @@ class ProjectRecordsApi:
 
 
     @validate_call
-    async def post_project_record_without_preload_content(
+    def post_project_record_without_preload_content(
         self,
         post_project_record_request: PostProjectRecordRequest,
         _request_timeout: Union[
@@ -758,7 +758,7 @@ class ProjectRecordsApi:
             '200': "ProjectResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )

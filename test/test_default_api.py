@@ -17,16 +17,16 @@ import unittest
 from uncertainty_engine_resource_client.api.default_api import DefaultApi
 
 
-class TestDefaultApi(unittest.IsolatedAsyncioTestCase):
+class TestDefaultApi(unittest.TestCase):
     """DefaultApi unit test stubs"""
 
-    async def asyncSetUp(self) -> None:
+    def setUp(self) -> None:
         self.api = DefaultApi()
 
-    async def asyncTearDown(self) -> None:
-        await self.api.api_client.close()
+    def tearDown(self) -> None:
+        pass
 
-    async def test_health_health_get(self) -> None:
+    def test_health_health_get(self) -> None:
         """Test case for health_health_get
 
         Health

@@ -17,37 +17,37 @@ import unittest
 from uncertainty_engine_resource_client.api.templates_api import TemplatesApi
 
 
-class TestTemplatesApi(unittest.IsolatedAsyncioTestCase):
+class TestTemplatesApi(unittest.TestCase):
     """TemplatesApi unit test stubs"""
 
-    async def asyncSetUp(self) -> None:
+    def setUp(self) -> None:
         self.api = TemplatesApi()
 
-    async def asyncTearDown(self) -> None:
-        await self.api.api_client.close()
+    def tearDown(self) -> None:
+        pass
 
-    async def test_delete_workflow_template(self) -> None:
+    def test_delete_workflow_template(self) -> None:
         """Test case for delete_workflow_template
 
         Delete Workflow Template
         """
         pass
 
-    async def test_get_workflow_template_record(self) -> None:
+    def test_get_workflow_template_record(self) -> None:
         """Test case for get_workflow_template_record
 
         Get Workflow Template
         """
         pass
 
-    async def test_get_workflow_template_records(self) -> None:
+    def test_get_workflow_template_records(self) -> None:
         """Test case for get_workflow_template_records
 
         Get Workflow Templates
         """
         pass
 
-    async def test_workflow_template(self) -> None:
+    def test_workflow_template(self) -> None:
         """Test case for workflow_template
 
         Workflow Template

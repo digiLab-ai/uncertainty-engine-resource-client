@@ -33,14 +33,14 @@ configuration = uncertainty_engine_resource_client.Configuration(
 
 
 # Enter a context with an instance of the API client
-async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
+with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = uncertainty_engine_resource_client.AccountRecordsApi(api_client)
     account_id = 'account_id_example' # str | 
 
     try:
         # Delete Account Record
-        api_response = await api_instance.delete_account_record(account_id)
+        api_response = api_instance.delete_account_record(account_id)
         print("The response of AccountRecordsApi->delete_account_record:\n")
         pprint(api_response)
     except Exception as e:
@@ -102,14 +102,14 @@ configuration = uncertainty_engine_resource_client.Configuration(
 
 
 # Enter a context with an instance of the API client
-async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
+with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = uncertainty_engine_resource_client.AccountRecordsApi(api_client)
     account_id = 'account_id_example' # str | 
 
     try:
         # Get Account Record Id
-        api_response = await api_instance.get_account_record(account_id)
+        api_response = api_instance.get_account_record(account_id)
         print("The response of AccountRecordsApi->get_account_record:\n")
         pprint(api_response)
     except Exception as e:
@@ -171,14 +171,14 @@ configuration = uncertainty_engine_resource_client.Configuration(
 
 
 # Enter a context with an instance of the API client
-async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
+with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = uncertainty_engine_resource_client.AccountRecordsApi(api_client)
     account_id = 'account_id_example' # str | 
 
     try:
         # Get Account Record Projects
-        api_response = await api_instance.get_account_record_projects(account_id)
+        api_response = api_instance.get_account_record_projects(account_id)
         print("The response of AccountRecordsApi->get_account_record_projects:\n")
         pprint(api_response)
     except Exception as e:
@@ -241,14 +241,14 @@ configuration = uncertainty_engine_resource_client.Configuration(
 
 
 # Enter a context with an instance of the API client
-async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
+with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = uncertainty_engine_resource_client.AccountRecordsApi(api_client)
     post_account_record_request = uncertainty_engine_resource_client.PostAccountRecordRequest() # PostAccountRecordRequest | 
 
     try:
         # Post Account Record
-        api_response = await api_instance.post_account_record(post_account_record_request)
+        api_response = api_instance.post_account_record(post_account_record_request)
         print("The response of AccountRecordsApi->post_account_record:\n")
         pprint(api_response)
     except Exception as e:

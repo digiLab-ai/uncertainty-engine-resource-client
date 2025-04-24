@@ -32,14 +32,14 @@ configuration = uncertainty_engine_resource_client.Configuration(
 
 
 # Enter a context with an instance of the API client
-async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
+with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = uncertainty_engine_resource_client.ProjectRecordsApi(api_client)
     project_id = 'project_id_example' # str | 
 
     try:
         # Delete Project Record
-        api_response = await api_instance.delete_project_record(project_id)
+        api_response = api_instance.delete_project_record(project_id)
         print("The response of ProjectRecordsApi->delete_project_record:\n")
         pprint(api_response)
     except Exception as e:
@@ -101,14 +101,14 @@ configuration = uncertainty_engine_resource_client.Configuration(
 
 
 # Enter a context with an instance of the API client
-async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
+with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = uncertainty_engine_resource_client.ProjectRecordsApi(api_client)
     project_id = 'project_id_example' # str | 
 
     try:
         # Get Project Record Id
-        api_response = await api_instance.get_project_record_id(project_id)
+        api_response = api_instance.get_project_record_id(project_id)
         print("The response of ProjectRecordsApi->get_project_record_id:\n")
         pprint(api_response)
     except Exception as e:
@@ -171,14 +171,14 @@ configuration = uncertainty_engine_resource_client.Configuration(
 
 
 # Enter a context with an instance of the API client
-async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
+with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = uncertainty_engine_resource_client.ProjectRecordsApi(api_client)
     post_project_record_request = uncertainty_engine_resource_client.PostProjectRecordRequest() # PostProjectRecordRequest | 
 
     try:
         # Post Project Record
-        api_response = await api_instance.post_project_record(post_project_record_request)
+        api_response = api_instance.post_project_record(post_project_record_request)
         print("The response of ProjectRecordsApi->post_project_record:\n")
         pprint(api_response)
     except Exception as e:

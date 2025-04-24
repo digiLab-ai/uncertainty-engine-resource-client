@@ -46,7 +46,7 @@ class ResourcesApi:
 
 
     @validate_call
-    async def delete_resource_record(
+    def delete_resource_record(
         self,
         project_id: StrictStr,
         resource_type: StrictStr,
@@ -110,11 +110,11 @@ class ResourcesApi:
             '200': "object",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -122,7 +122,7 @@ class ResourcesApi:
 
 
     @validate_call
-    async def delete_resource_record_with_http_info(
+    def delete_resource_record_with_http_info(
         self,
         project_id: StrictStr,
         resource_type: StrictStr,
@@ -186,11 +186,11 @@ class ResourcesApi:
             '200': "object",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -198,7 +198,7 @@ class ResourcesApi:
 
 
     @validate_call
-    async def delete_resource_record_without_preload_content(
+    def delete_resource_record_without_preload_content(
         self,
         project_id: StrictStr,
         resource_type: StrictStr,
@@ -262,7 +262,7 @@ class ResourcesApi:
             '200': "object",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -339,7 +339,7 @@ class ResourcesApi:
 
 
     @validate_call
-    async def delete_resource_version_record(
+    def delete_resource_version_record(
         self,
         project_id: StrictStr,
         resource_type: StrictStr,
@@ -407,11 +407,11 @@ class ResourcesApi:
             '200': "object",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -419,7 +419,7 @@ class ResourcesApi:
 
 
     @validate_call
-    async def delete_resource_version_record_with_http_info(
+    def delete_resource_version_record_with_http_info(
         self,
         project_id: StrictStr,
         resource_type: StrictStr,
@@ -487,11 +487,11 @@ class ResourcesApi:
             '200': "object",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -499,7 +499,7 @@ class ResourcesApi:
 
 
     @validate_call
-    async def delete_resource_version_record_without_preload_content(
+    def delete_resource_version_record_without_preload_content(
         self,
         project_id: StrictStr,
         resource_type: StrictStr,
@@ -567,7 +567,7 @@ class ResourcesApi:
             '200': "object",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -647,7 +647,7 @@ class ResourcesApi:
 
 
     @validate_call
-    async def get_latest_resource_version(
+    def get_latest_resource_version(
         self,
         project_id: StrictStr,
         resource_type: StrictStr,
@@ -711,11 +711,11 @@ class ResourcesApi:
             '200': "GetResourceVersionResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -723,7 +723,7 @@ class ResourcesApi:
 
 
     @validate_call
-    async def get_latest_resource_version_with_http_info(
+    def get_latest_resource_version_with_http_info(
         self,
         project_id: StrictStr,
         resource_type: StrictStr,
@@ -787,11 +787,11 @@ class ResourcesApi:
             '200': "GetResourceVersionResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -799,7 +799,7 @@ class ResourcesApi:
 
 
     @validate_call
-    async def get_latest_resource_version_without_preload_content(
+    def get_latest_resource_version_without_preload_content(
         self,
         project_id: StrictStr,
         resource_type: StrictStr,
@@ -863,7 +863,7 @@ class ResourcesApi:
             '200': "GetResourceVersionResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -940,7 +940,7 @@ class ResourcesApi:
 
 
     @validate_call
-    async def get_project_resource_records(
+    def get_project_resource_records(
         self,
         project_id: StrictStr,
         resource_type: StrictStr,
@@ -1000,11 +1000,11 @@ class ResourcesApi:
             '200': "GetResourceRecordsResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1012,7 +1012,7 @@ class ResourcesApi:
 
 
     @validate_call
-    async def get_project_resource_records_with_http_info(
+    def get_project_resource_records_with_http_info(
         self,
         project_id: StrictStr,
         resource_type: StrictStr,
@@ -1072,11 +1072,11 @@ class ResourcesApi:
             '200': "GetResourceRecordsResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1084,7 +1084,7 @@ class ResourcesApi:
 
 
     @validate_call
-    async def get_project_resource_records_without_preload_content(
+    def get_project_resource_records_without_preload_content(
         self,
         project_id: StrictStr,
         resource_type: StrictStr,
@@ -1144,7 +1144,7 @@ class ResourcesApi:
             '200': "GetResourceRecordsResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1218,7 +1218,7 @@ class ResourcesApi:
 
 
     @validate_call
-    async def get_resource_record(
+    def get_resource_record(
         self,
         project_id: StrictStr,
         resource_type: StrictStr,
@@ -1282,11 +1282,11 @@ class ResourcesApi:
             '200': "ResourceResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1294,7 +1294,7 @@ class ResourcesApi:
 
 
     @validate_call
-    async def get_resource_record_with_http_info(
+    def get_resource_record_with_http_info(
         self,
         project_id: StrictStr,
         resource_type: StrictStr,
@@ -1358,11 +1358,11 @@ class ResourcesApi:
             '200': "ResourceResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1370,7 +1370,7 @@ class ResourcesApi:
 
 
     @validate_call
-    async def get_resource_record_without_preload_content(
+    def get_resource_record_without_preload_content(
         self,
         project_id: StrictStr,
         resource_type: StrictStr,
@@ -1434,7 +1434,7 @@ class ResourcesApi:
             '200': "ResourceResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1511,7 +1511,7 @@ class ResourcesApi:
 
 
     @validate_call
-    async def get_resource_version(
+    def get_resource_version(
         self,
         project_id: StrictStr,
         resource_type: StrictStr,
@@ -1579,11 +1579,11 @@ class ResourcesApi:
             '200': "GetResourceVersionResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1591,7 +1591,7 @@ class ResourcesApi:
 
 
     @validate_call
-    async def get_resource_version_with_http_info(
+    def get_resource_version_with_http_info(
         self,
         project_id: StrictStr,
         resource_type: StrictStr,
@@ -1659,11 +1659,11 @@ class ResourcesApi:
             '200': "GetResourceVersionResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1671,7 +1671,7 @@ class ResourcesApi:
 
 
     @validate_call
-    async def get_resource_version_without_preload_content(
+    def get_resource_version_without_preload_content(
         self,
         project_id: StrictStr,
         resource_type: StrictStr,
@@ -1739,7 +1739,7 @@ class ResourcesApi:
             '200': "GetResourceVersionResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -1819,7 +1819,7 @@ class ResourcesApi:
 
 
     @validate_call
-    async def get_resource_version_records(
+    def get_resource_version_records(
         self,
         project_id: StrictStr,
         resource_type: StrictStr,
@@ -1883,11 +1883,11 @@ class ResourcesApi:
             '200': "GetResourceVersionRecordsResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1895,7 +1895,7 @@ class ResourcesApi:
 
 
     @validate_call
-    async def get_resource_version_records_with_http_info(
+    def get_resource_version_records_with_http_info(
         self,
         project_id: StrictStr,
         resource_type: StrictStr,
@@ -1959,11 +1959,11 @@ class ResourcesApi:
             '200': "GetResourceVersionRecordsResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -1971,7 +1971,7 @@ class ResourcesApi:
 
 
     @validate_call
-    async def get_resource_version_records_without_preload_content(
+    def get_resource_version_records_without_preload_content(
         self,
         project_id: StrictStr,
         resource_type: StrictStr,
@@ -2035,7 +2035,7 @@ class ResourcesApi:
             '200': "GetResourceVersionRecordsResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -2112,7 +2112,7 @@ class ResourcesApi:
 
 
     @validate_call
-    async def patch_resource_version(
+    def patch_resource_version(
         self,
         project_id: StrictStr,
         resource_type: StrictStr,
@@ -2183,11 +2183,11 @@ class ResourcesApi:
             '200': "object",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -2195,7 +2195,7 @@ class ResourcesApi:
 
 
     @validate_call
-    async def patch_resource_version_with_http_info(
+    def patch_resource_version_with_http_info(
         self,
         project_id: StrictStr,
         resource_type: StrictStr,
@@ -2266,11 +2266,11 @@ class ResourcesApi:
             '200': "object",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -2278,7 +2278,7 @@ class ResourcesApi:
 
 
     @validate_call
-    async def patch_resource_version_without_preload_content(
+    def patch_resource_version_without_preload_content(
         self,
         project_id: StrictStr,
         resource_type: StrictStr,
@@ -2349,7 +2349,7 @@ class ResourcesApi:
             '200': "object",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -2445,7 +2445,7 @@ class ResourcesApi:
 
 
     @validate_call
-    async def post_resource_record(
+    def post_resource_record(
         self,
         project_id: StrictStr,
         resource_type: StrictStr,
@@ -2509,11 +2509,11 @@ class ResourcesApi:
             '200': "ResourceResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -2521,7 +2521,7 @@ class ResourcesApi:
 
 
     @validate_call
-    async def post_resource_record_with_http_info(
+    def post_resource_record_with_http_info(
         self,
         project_id: StrictStr,
         resource_type: StrictStr,
@@ -2585,11 +2585,11 @@ class ResourcesApi:
             '200': "ResourceResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -2597,7 +2597,7 @@ class ResourcesApi:
 
 
     @validate_call
-    async def post_resource_record_without_preload_content(
+    def post_resource_record_without_preload_content(
         self,
         project_id: StrictStr,
         resource_type: StrictStr,
@@ -2661,7 +2661,7 @@ class ResourcesApi:
             '200': "ResourceResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -2751,7 +2751,7 @@ class ResourcesApi:
 
 
     @validate_call
-    async def post_resource_version(
+    def post_resource_version(
         self,
         project_id: StrictStr,
         resource_type: StrictStr,
@@ -2819,11 +2819,11 @@ class ResourcesApi:
             '200': "PostResourceVersionResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -2831,7 +2831,7 @@ class ResourcesApi:
 
 
     @validate_call
-    async def post_resource_version_with_http_info(
+    def post_resource_version_with_http_info(
         self,
         project_id: StrictStr,
         resource_type: StrictStr,
@@ -2899,11 +2899,11 @@ class ResourcesApi:
             '200': "PostResourceVersionResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -2911,7 +2911,7 @@ class ResourcesApi:
 
 
     @validate_call
-    async def post_resource_version_without_preload_content(
+    def post_resource_version_without_preload_content(
         self,
         project_id: StrictStr,
         resource_type: StrictStr,
@@ -2979,7 +2979,7 @@ class ResourcesApi:
             '200': "PostResourceVersionResponse",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -3072,7 +3072,7 @@ class ResourcesApi:
 
 
     @validate_call
-    async def put_upload_resource_version(
+    def put_upload_resource_version(
         self,
         project_id: StrictStr,
         resource_type: StrictStr,
@@ -3140,11 +3140,11 @@ class ResourcesApi:
             '200': "object",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -3152,7 +3152,7 @@ class ResourcesApi:
 
 
     @validate_call
-    async def put_upload_resource_version_with_http_info(
+    def put_upload_resource_version_with_http_info(
         self,
         project_id: StrictStr,
         resource_type: StrictStr,
@@ -3220,11 +3220,11 @@ class ResourcesApi:
             '200': "object",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -3232,7 +3232,7 @@ class ResourcesApi:
 
 
     @validate_call
-    async def put_upload_resource_version_without_preload_content(
+    def put_upload_resource_version_without_preload_content(
         self,
         project_id: StrictStr,
         resource_type: StrictStr,
@@ -3300,7 +3300,7 @@ class ResourcesApi:
             '200': "object",
             '422': "HTTPValidationError",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )

@@ -17,37 +17,37 @@ import unittest
 from uncertainty_engine_resource_client.api.account_records_api import AccountRecordsApi
 
 
-class TestAccountRecordsApi(unittest.IsolatedAsyncioTestCase):
+class TestAccountRecordsApi(unittest.TestCase):
     """AccountRecordsApi unit test stubs"""
 
-    async def asyncSetUp(self) -> None:
+    def setUp(self) -> None:
         self.api = AccountRecordsApi()
 
-    async def asyncTearDown(self) -> None:
-        await self.api.api_client.close()
+    def tearDown(self) -> None:
+        pass
 
-    async def test_delete_account_record(self) -> None:
+    def test_delete_account_record(self) -> None:
         """Test case for delete_account_record
 
         Delete Account Record
         """
         pass
 
-    async def test_get_account_record(self) -> None:
+    def test_get_account_record(self) -> None:
         """Test case for get_account_record
 
         Get Account Record Id
         """
         pass
 
-    async def test_get_account_record_projects(self) -> None:
+    def test_get_account_record_projects(self) -> None:
         """Test case for get_account_record_projects
 
         Get Account Record Projects
         """
         pass
 
-    async def test_post_account_record(self) -> None:
+    def test_post_account_record(self) -> None:
         """Test case for post_account_record
 
         Post Account Record

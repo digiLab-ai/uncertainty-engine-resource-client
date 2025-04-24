@@ -28,13 +28,13 @@ configuration = uncertainty_engine_resource_client.Configuration(
 
 
 # Enter a context with an instance of the API client
-async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
+with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = uncertainty_engine_resource_client.DefaultApi(api_client)
 
     try:
         # Health
-        api_response = await api_instance.health_health_get()
+        api_response = api_instance.health_health_get()
         print("The response of DefaultApi->health_health_get:\n")
         pprint(api_response)
     except Exception as e:

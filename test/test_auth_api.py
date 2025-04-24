@@ -17,23 +17,23 @@ import unittest
 from uncertainty_engine_resource_client.api.auth_api import AuthApi
 
 
-class TestAuthApi(unittest.IsolatedAsyncioTestCase):
+class TestAuthApi(unittest.TestCase):
     """AuthApi unit test stubs"""
 
-    async def asyncSetUp(self) -> None:
+    def setUp(self) -> None:
         self.api = AuthApi()
 
-    async def asyncTearDown(self) -> None:
-        await self.api.api_client.close()
+    def tearDown(self) -> None:
+        pass
 
-    async def test_get_tokens(self) -> None:
+    def test_get_tokens(self) -> None:
         """Test case for get_tokens
 
         Get Tokens
         """
         pass
 
-    async def test_refresh_token(self) -> None:
+    def test_refresh_token(self) -> None:
         """Test case for refresh_token
 
         Refresh Token

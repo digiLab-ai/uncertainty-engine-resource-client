@@ -31,14 +31,14 @@ configuration = uncertainty_engine_resource_client.Configuration(
 
 
 # Enter a context with an instance of the API client
-async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
+with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = uncertainty_engine_resource_client.TemplatesApi(api_client)
     workflow_template_id = 'workflow_template_id_example' # str | 
 
     try:
         # Delete Workflow Template
-        api_response = await api_instance.delete_workflow_template(workflow_template_id)
+        api_response = api_instance.delete_workflow_template(workflow_template_id)
         print("The response of TemplatesApi->delete_workflow_template:\n")
         pprint(api_response)
     except Exception as e:
@@ -98,14 +98,14 @@ configuration = uncertainty_engine_resource_client.Configuration(
 
 
 # Enter a context with an instance of the API client
-async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
+with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = uncertainty_engine_resource_client.TemplatesApi(api_client)
     workflow_template_id = 'workflow_template_id_example' # str | 
 
     try:
         # Get Workflow Template
-        api_response = await api_instance.get_workflow_template_record(workflow_template_id)
+        api_response = api_instance.get_workflow_template_record(workflow_template_id)
         print("The response of TemplatesApi->get_workflow_template_record:\n")
         pprint(api_response)
     except Exception as e:
@@ -165,13 +165,13 @@ configuration = uncertainty_engine_resource_client.Configuration(
 
 
 # Enter a context with an instance of the API client
-async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
+with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = uncertainty_engine_resource_client.TemplatesApi(api_client)
 
     try:
         # Get Workflow Templates
-        api_response = await api_instance.get_workflow_template_records()
+        api_response = api_instance.get_workflow_template_records()
         print("The response of TemplatesApi->get_workflow_template_records:\n")
         pprint(api_response)
     except Exception as e:
@@ -228,14 +228,14 @@ configuration = uncertainty_engine_resource_client.Configuration(
 
 
 # Enter a context with an instance of the API client
-async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
+with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = uncertainty_engine_resource_client.TemplatesApi(api_client)
     post_workflow_template_record_request = uncertainty_engine_resource_client.PostWorkflowTemplateRecordRequest() # PostWorkflowTemplateRecordRequest | 
 
     try:
         # Workflow Template
-        api_response = await api_instance.workflow_template(post_workflow_template_record_request)
+        api_response = api_instance.workflow_template(post_workflow_template_record_request)
         print("The response of TemplatesApi->workflow_template:\n")
         pprint(api_response)
     except Exception as e:
