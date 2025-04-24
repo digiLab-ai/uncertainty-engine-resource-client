@@ -1,0 +1,29 @@
+# openapi-generator-config.yaml
+
+# Required core settings
+generatorName: python  # Equivalent to -g/--generator-name
+inputSpec: https://tu8vus047g.execute-api.eu-west-2.amazonaws.com/openapi.json  # Location of the OpenAPI spec
+outputDir: .  # Directory to generate the client code
+
+# Generator metadata
+packageName: uncertainty-engine-resource-client
+
+# Generator behavior options
+# skipValidateSpec: true  # Equivalent to --skip-validate-spec
+# templateDir: ./custom-templates  # Equivalent to -t/--template-dir
+library: asyncio  # Equivalent to --library
+
+# gitUserId: my-username
+gitRepoId: uncertainty-engine-resource-client
+gitHost: github.com
+gitUserId: digiLab-ai
+
+minimalUpdate: true  # Only write files that have changed
+
+# Global properties (equivalent to --global-property)
+globalProperties:
+  apis: ""  # Generate all APIs
+  models: ""  # Generate all models
+  supportingFiles: "true"
+  modelTests: "false"
+  apiTests: "true"
