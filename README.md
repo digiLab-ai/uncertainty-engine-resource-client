@@ -31,7 +31,7 @@ If the python package is hosted on a repository, you can install directly using:
 ```sh
 pip install git+https://github.com/digiLab-ai/uncertainty-engine-resource-client.git
 ```
-(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/digiLab-ai/uncertainty-engine-resource-client.git`)
+
 
 Then import the package:
 ```python
@@ -61,14 +61,14 @@ configuration = uncertainty_engine_resource_client.Configuration(
 
 
 # Enter a context with an instance of the API client
-async with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
+with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = uncertainty_engine_resource_client.AccountRecordsApi(api_client)
     account_id = 'account_id_example' # str | 
 
     try:
         # Delete Account Record
-        api_response = await api_instance.delete_account_record(account_id)
+        api_response = api_instance.delete_account_record(account_id)
         print("The response of AccountRecordsApi->delete_account_record:\n")
         pprint(api_response)
     except ApiException as e:
