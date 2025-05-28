@@ -75,13 +75,6 @@ class TestResourcesApi(unittest.TestCase):
         """
         pass
 
-    def test_patch_resource_version(self) -> None:
-        """Test case for patch_resource_version
-
-        Patch Resource Version
-        """
-        pass
-
     def test_post_resource_record(self) -> None:
         """Test case for post_resource_record
 
