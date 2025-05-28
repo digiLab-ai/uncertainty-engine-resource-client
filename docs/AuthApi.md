@@ -17,7 +17,7 @@ Exchange Cognito tokens for API tokens
 
 ### Example
 
-* Bearer Authentication (HTTPBearer):
+* Api Key Authentication (APIKeyHeader):
 
 ```python
 import uncertainty_engine_resource_client
@@ -36,10 +36,11 @@ configuration = uncertainty_engine_resource_client.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure Bearer authorization: HTTPBearer
-configuration = uncertainty_engine_resource_client.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
-)
+# Configure API key authorization: APIKeyHeader
+configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
@@ -67,7 +68,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[HTTPBearer](../README.md#HTTPBearer)
+[APIKeyHeader](../README.md#APIKeyHeader)
 
 ### HTTP request headers
 
@@ -91,7 +92,7 @@ Get new access token using refresh token
 
 ### Example
 
-* Bearer Authentication (HTTPBearer):
+* Api Key Authentication (APIKeyHeader):
 
 ```python
 import uncertainty_engine_resource_client
@@ -110,10 +111,11 @@ configuration = uncertainty_engine_resource_client.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure Bearer authorization: HTTPBearer
-configuration = uncertainty_engine_resource_client.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
-)
+# Configure API key authorization: APIKeyHeader
+configuration.api_key['APIKeyHeader'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKeyHeader'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
@@ -141,7 +143,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[HTTPBearer](../README.md#HTTPBearer)
+[APIKeyHeader](../README.md#APIKeyHeader)
 
 ### HTTP request headers
 

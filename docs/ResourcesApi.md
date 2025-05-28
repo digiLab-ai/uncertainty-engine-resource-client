@@ -11,7 +11,6 @@ Method | HTTP request | Description
 [**get_resource_record**](ResourcesApi.md#get_resource_record) | **GET** /api/projects/{project_id}/resources/{resource_type}/{resource_id} | Get Resource Record
 [**get_resource_version**](ResourcesApi.md#get_resource_version) | **GET** /api/projects/{project_id}/resources/{resource_type}/{resource_id}/versions/{resource_version_id} | Get Resource Version
 [**get_resource_version_records**](ResourcesApi.md#get_resource_version_records) | **GET** /api/projects/{project_id}/resources/{resource_type}/{resource_id}/versions | Get Resource Version Records
-[**patch_resource_version**](ResourcesApi.md#patch_resource_version) | **PATCH** /api/projects/{project_id}/resources/{resource_type}/{resource_id}/versions/{resource_version_id} | Patch Resource Version
 [**post_resource_record**](ResourcesApi.md#post_resource_record) | **POST** /api/projects/{project_id}/resources/{resource_type} | Post Resource Record
 [**post_resource_version**](ResourcesApi.md#post_resource_version) | **POST** /api/projects/{project_id}/resources/{resource_type}/{resource_id}/versions | Post Resource Version
 [**put_upload_resource_version**](ResourcesApi.md#put_upload_resource_version) | **PUT** /api/projects/{project_id}/resources/{resource_type}/{resource_id}/pending/{pending_record_id} | Put Upload Resource Version
@@ -538,81 +537,6 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Successful Response |  -  |
-**422** | Validation Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **patch_resource_version**
-> object patch_resource_version(project_id, resource_type, resource_id, resource_version_id, patch_resource_version_request)
-
-Patch Resource Version
-
-### Example
-
-
-```python
-import uncertainty_engine_resource_client
-from uncertainty_engine_resource_client.models.patch_resource_version_request import PatchResourceVersionRequest
-from uncertainty_engine_resource_client.rest import ApiException
-from pprint import pprint
-
-# Defining the host is optional and defaults to https://tu8vus047g.execute-api.eu-west-2.amazonaws.com
-# See configuration.py for a list of all supported configuration parameters.
-configuration = uncertainty_engine_resource_client.Configuration(
-    host = "https://tu8vus047g.execute-api.eu-west-2.amazonaws.com"
-)
-
-
-# Enter a context with an instance of the API client
-with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = uncertainty_engine_resource_client.ResourcesApi(api_client)
-    project_id = 'project_id_example' # str | 
-    resource_type = 'resource_type_example' # str | 
-    resource_id = 'resource_id_example' # str | 
-    resource_version_id = 'resource_version_id_example' # str | 
-    patch_resource_version_request = uncertainty_engine_resource_client.PatchResourceVersionRequest() # PatchResourceVersionRequest | 
-
-    try:
-        # Patch Resource Version
-        api_response = api_instance.patch_resource_version(project_id, resource_type, resource_id, resource_version_id, patch_resource_version_request)
-        print("The response of ResourcesApi->patch_resource_version:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling ResourcesApi->patch_resource_version: %s\n" % e)
-```
-
-
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **project_id** | **str**|  | 
- **resource_type** | **str**|  | 
- **resource_id** | **str**|  | 
- **resource_version_id** | **str**|  | 
- **patch_resource_version_request** | [**PatchResourceVersionRequest**](PatchResourceVersionRequest.md)|  | 
-
-### Return type
-
-**object**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
