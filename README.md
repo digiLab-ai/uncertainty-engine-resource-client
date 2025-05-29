@@ -64,7 +64,7 @@ configuration = uncertainty_engine_resource_client.Configuration(
 with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = uncertainty_engine_resource_client.AccountRecordsApi(api_client)
-    account_id = 'account_id_example' # str | 
+    account_id = 'account_id_example' # str |
 
     try:
         # Delete Account Record
@@ -90,6 +90,7 @@ Class | Method | HTTP request | Description
 *AuthApi* | [**refresh_token**](docs/AuthApi.md#refresh_token) | **POST** /api/auth/refresh | Refresh Token
 *ProjectRecordsApi* | [**delete_project_record**](docs/ProjectRecordsApi.md#delete_project_record) | **DELETE** /api/projects/{project_id} | Delete Project Record
 *ProjectRecordsApi* | [**get_project_record_id**](docs/ProjectRecordsApi.md#get_project_record_id) | **GET** /api/projects/{project_id} | Get Project Record Id
+*ProjectRecordsApi* | [**patch_project_record**](docs/ProjectRecordsApi.md#patch_project_record) | **PATCH** /api/projects/{project_id}/name | Patch Project Record Name
 *ProjectRecordsApi* | [**post_project_record**](docs/ProjectRecordsApi.md#post_project_record) | **POST** /api/projects | Post Project Record
 *ResourcesApi* | [**delete_resource_record**](docs/ResourcesApi.md#delete_resource_record) | **DELETE** /api/projects/{project_id}/resources/{resource_type}/{resource_id} | Delete Resource
 *ResourcesApi* | [**delete_resource_version_record**](docs/ResourcesApi.md#delete_resource_version_record) | **DELETE** /api/projects/{project_id}/resources/{resource_type}/{resource_id}/versions/{resource_version_id} | Delete Resource Version
@@ -98,7 +99,6 @@ Class | Method | HTTP request | Description
 *ResourcesApi* | [**get_resource_record**](docs/ResourcesApi.md#get_resource_record) | **GET** /api/projects/{project_id}/resources/{resource_type}/{resource_id} | Get Resource Record
 *ResourcesApi* | [**get_resource_version**](docs/ResourcesApi.md#get_resource_version) | **GET** /api/projects/{project_id}/resources/{resource_type}/{resource_id}/versions/{resource_version_id} | Get Resource Version
 *ResourcesApi* | [**get_resource_version_records**](docs/ResourcesApi.md#get_resource_version_records) | **GET** /api/projects/{project_id}/resources/{resource_type}/{resource_id}/versions | Get Resource Version Records
-*ResourcesApi* | [**patch_resource_version**](docs/ResourcesApi.md#patch_resource_version) | **PATCH** /api/projects/{project_id}/resources/{resource_type}/{resource_id}/versions/{resource_version_id} | Patch Resource Version
 *ResourcesApi* | [**post_resource_record**](docs/ResourcesApi.md#post_resource_record) | **POST** /api/projects/{project_id}/resources/{resource_type} | Post Resource Record
 *ResourcesApi* | [**post_resource_version**](docs/ResourcesApi.md#post_resource_version) | **POST** /api/projects/{project_id}/resources/{resource_type}/{resource_id}/versions | Post Resource Version
 *ResourcesApi* | [**put_upload_resource_version**](docs/ResourcesApi.md#put_upload_resource_version) | **PUT** /api/projects/{project_id}/resources/{resource_type}/{resource_id}/pending/{pending_record_id} | Put Upload Resource Version
@@ -132,7 +132,7 @@ Class | Method | HTTP request | Description
  - [GetWorkflowTemplateRecordsResponse](docs/GetWorkflowTemplateRecordsResponse.md)
  - [GetWorkflowVersionRecordsResponse](docs/GetWorkflowVersionRecordsResponse.md)
  - [HTTPValidationError](docs/HTTPValidationError.md)
- - [PatchResourceVersionRequest](docs/PatchResourceVersionRequest.md)
+ - [PatchProjectRecordNameRequest](docs/PatchProjectRecordNameRequest.md)
  - [PostAccountRecordRequest](docs/PostAccountRecordRequest.md)
  - [PostProjectRecordRequest](docs/PostProjectRecordRequest.md)
  - [PostResourceRecordRequest](docs/PostResourceRecordRequest.md)
@@ -165,6 +165,21 @@ Class | Method | HTTP request | Description
  - [WorkflowVersionRecordOutput](docs/WorkflowVersionRecordOutput.md)
  - [WorkflowVersionResponse](docs/WorkflowVersionResponse.md)
 
+
+<a id="documentation-for-authorization"></a>
+## Documentation For Authorization
+
+
+Authentication schemes defined for the API:
+<a id="APIKeyHeader"></a>
+### APIKeyHeader
+
+- **Type**: API key
+- **API key parameter name**: X-Resource-Service-Token
+- **Location**: HTTP header
+
+
+## Author
 
 
 

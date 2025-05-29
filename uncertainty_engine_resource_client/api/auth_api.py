@@ -261,7 +261,7 @@ class AuthApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'HTTPBearer'
+            'APIKeyHeader'
         ]
 
         return self.api_client.param_serialize(
@@ -507,7 +507,7 @@ class AuthApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'HTTPBearer'
+            'APIKeyHeader'
         ]
 
         return self.api_client.param_serialize(

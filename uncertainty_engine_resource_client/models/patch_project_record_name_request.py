@@ -17,18 +17,17 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict
-from typing import Any, ClassVar, Dict, List, Optional
+from pydantic import BaseModel, ConfigDict, StrictStr
+from typing import Any, ClassVar, Dict, List
 from typing import Optional, Set
 from typing_extensions import Self
 
-class PatchResourceVersionRequest(BaseModel):
+class PatchProjectRecordNameRequest(BaseModel):
     """
-    PatchResourceVersionRequest
+    PatchProjectRecordNameRequest
     """ # noqa: E501
-    resource_update: Optional[Any]
-    additional_properties: Dict[str, Any] = {}
-    __properties: ClassVar[List[str]] = ["resource_update"]
+    new_name: StrictStr
+    __properties: ClassVar[List[str]] = ["new_name"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -48,7 +47,7 @@ class PatchResourceVersionRequest(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of PatchResourceVersionRequest from a JSON string"""
+        """Create an instance of PatchProjectRecordNameRequest from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -60,10 +59,8 @@ class PatchResourceVersionRequest(BaseModel):
         * `None` is only added to the output dict for nullable fields that
           were set at model initialization. Other fields with value `None`
           are ignored.
-        * Fields in `self.additional_properties` are added to the output dict.
         """
         excluded_fields: Set[str] = set([
-            "additional_properties",
         ])
 
         _dict = self.model_dump(
@@ -71,21 +68,11 @@ class PatchResourceVersionRequest(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # puts key-value pairs in additional_properties in the top level
-        if self.additional_properties is not None:
-            for _key, _value in self.additional_properties.items():
-                _dict[_key] = _value
-
-        # set to None if resource_update (nullable) is None
-        # and model_fields_set contains the field
-        if self.resource_update is None and "resource_update" in self.model_fields_set:
-            _dict['resource_update'] = None
-
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of PatchResourceVersionRequest from a dict"""
+        """Create an instance of PatchProjectRecordNameRequest from a dict"""
         if obj is None:
             return None
 
@@ -93,13 +80,8 @@ class PatchResourceVersionRequest(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "resource_update": obj.get("resource_update")
+            "new_name": obj.get("new_name")
         })
-        # store additional fields in additional_properties
-        for _key in obj.keys():
-            if _key not in cls.__properties:
-                _obj.additional_properties[_key] = obj.get(_key)
-
         return _obj
 
 

@@ -40,6 +40,13 @@ class TestProjectRecordsApi(unittest.TestCase):
         """
         pass
 
+    def test_patch_project_record(self) -> None:
+        """Test case for patch_project_record
+
+        Patch Project Record Name
+        """
+        pass
+
     def test_post_project_record(self) -> None:
         """Test case for post_project_record
 
