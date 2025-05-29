@@ -1,18 +1,15 @@
 # The generator will attempt to create/overwrite these files if not ignored.
 
 # CI related files we do not need
-.github/workflows/python.yml
 .gitlab-ci.yml
 .travis.yml
 git_push.sh
 
 # Testing related files we do not need
 tox.ini
-test-requirements.txt
 
 # Setup/Repo related files we do not need
 README.md
 setup.py
 setup.cfg
-requirements.txt
 pyproject.toml
