@@ -1,3 +1,4 @@
+.github/workflows/python.yml
 .gitignore
 docs/AccountRecordInput.md
 docs/AccountRecordOutput.md
@@ -49,14 +50,9 @@ docs/WorkflowVersionRecordInput.md
 docs/WorkflowVersionRecordOutput.md
 docs/WorkflowVersionResponse.md
 docs/WorkflowsApi.md
+requirements.txt
+test-requirements.txt
 test/__init__.py
-test/test_account_records_api.py
-test/test_auth_api.py
-test/test_default_api.py
-test/test_project_records_api.py
-test/test_resources_api.py
-test/test_templates_api.py
-test/test_workflows_api.py
 uncertainty_engine_resource_client/__init__.py
 uncertainty_engine_resource_client/api/__init__.py
 uncertainty_engine_resource_client/api/account_records_api.py
