@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**get_latest_workflow_version**](WorkflowsApi.md#get_latest_workflow_version) | **GET** /api/projects/{project_id}/workflows/{workflow_id}/latest | Get Latest Workflow Version
 [**get_project_workflow_records**](WorkflowsApi.md#get_project_workflow_records) | **GET** /api/projects/{project_id}/workflows | Get Project Workflow Records
 [**get_workflow_record**](WorkflowsApi.md#get_workflow_record) | **GET** /api/projects/{project_id}/workflows/{workflow_id} | Get Workflow Record
+[**get_workflow_records**](WorkflowsApi.md#get_workflow_records) | **GET** /api/workflows | Get Workflow Records
 [**get_workflow_version**](WorkflowsApi.md#get_workflow_version) | **GET** /api/projects/{project_id}/workflows/{workflow_id}/versions/{workflow_version_id} | Get Workflow Version
 [**get_workflow_version_records**](WorkflowsApi.md#get_workflow_version_records) | **GET** /api/projects/{project_id}/workflows/{workflow_id}/versions | Get Workflow Version Records
 [**post_workflow_record**](WorkflowsApi.md#post_workflow_record) | **POST** /api/projects/{project_id}/workflows | Post Workflow Record
@@ -366,6 +367,70 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | Successful Response |  -  |
 **422** | Validation Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_workflow_records**
+> GetWorkflowRecordsResponse get_workflow_records()
+
+Get Workflow Records
+
+Get all workflow records owned by the user.
+
+### Example
+
+
+```python
+import uncertainty_engine_resource_client
+from uncertainty_engine_resource_client.models.get_workflow_records_response import GetWorkflowRecordsResponse
+from uncertainty_engine_resource_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://tu8vus047g.execute-api.eu-west-2.amazonaws.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = uncertainty_engine_resource_client.Configuration(
+    host = "https://tu8vus047g.execute-api.eu-west-2.amazonaws.com"
+)
+
+
+# Enter a context with an instance of the API client
+with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = uncertainty_engine_resource_client.WorkflowsApi(api_client)
+
+    try:
+        # Get Workflow Records
+        api_response = api_instance.get_workflow_records()
+        print("The response of WorkflowsApi->get_workflow_records:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling WorkflowsApi->get_workflow_records: %s\n" % e)
+```
+
+
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**GetWorkflowRecordsResponse**](GetWorkflowRecordsResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

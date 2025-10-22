@@ -17,25 +17,18 @@ import pprint
 import re  # noqa: F401
 import json
 
-from datetime import datetime
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
-from typing import Any, ClassVar, Dict, List, Optional
+from pydantic import BaseModel, ConfigDict
+from typing import Any, ClassVar, Dict, List
+from uncertainty_engine_resource_client.models.project_record_output import ProjectRecordOutput
 from typing import Optional, Set
 from typing_extensions import Self
 
-class WorkflowRecordOutput(BaseModel):
+class GetProjectRecordsResponse(BaseModel):
     """
-    WorkflowRecordOutput
+    GetProjectRecordsResponse
     """ # noqa: E501
-    id: Optional[StrictStr] = Field(default=None, alias="_id")
-    name: StrictStr
-    description: Optional[StrictStr] = None
-    project_id: Optional[StrictStr] = None
-    owner_id: StrictStr
-    versions: Optional[List[StrictStr]] = None
-    created_at: Optional[datetime] = None
-    is_locked: Optional[StrictBool] = False
-    __properties: ClassVar[List[str]] = ["_id", "name", "description", "project_id", "owner_id", "versions", "created_at", "is_locked"]
+    project_records: List[ProjectRecordOutput]
+    __properties: ClassVar[List[str]] = ["project_records"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -55,7 +48,7 @@ class WorkflowRecordOutput(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of WorkflowRecordOutput from a JSON string"""
+        """Create an instance of GetProjectRecordsResponse from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -76,26 +69,18 @@ class WorkflowRecordOutput(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # set to None if id (nullable) is None
-        # and model_fields_set contains the field
-        if self.id is None and "id" in self.model_fields_set:
-            _dict['_id'] = None
-
-        # set to None if description (nullable) is None
-        # and model_fields_set contains the field
-        if self.description is None and "description" in self.model_fields_set:
-            _dict['description'] = None
-
-        # set to None if project_id (nullable) is None
-        # and model_fields_set contains the field
-        if self.project_id is None and "project_id" in self.model_fields_set:
-            _dict['project_id'] = None
-
+        # override the default output from pydantic by calling `to_dict()` of each item in project_records (list)
+        _items = []
+        if self.project_records:
+            for _item_project_records in self.project_records:
+                if _item_project_records:
+                    _items.append(_item_project_records.to_dict())
+            _dict['project_records'] = _items
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of WorkflowRecordOutput from a dict"""
+        """Create an instance of GetProjectRecordsResponse from a dict"""
         if obj is None:
             return None
 
@@ -103,14 +88,7 @@ class WorkflowRecordOutput(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "_id": obj.get("_id"),
-            "name": obj.get("name"),
-            "description": obj.get("description"),
-            "project_id": obj.get("project_id"),
-            "owner_id": obj.get("owner_id"),
-            "versions": obj.get("versions"),
-            "created_at": obj.get("created_at"),
-            "is_locked": obj.get("is_locked") if obj.get("is_locked") is not None else False
+            "project_records": [ProjectRecordOutput.from_dict(_item) for _item in obj["project_records"]] if obj.get("project_records") is not None else None
         })
         return _obj
 
