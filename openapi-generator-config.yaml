@@ -1,6 +1,6 @@
 # Configuration file for OpenAPI Generator
 generatorName: python
-inputSpec: http://prod-u-uncer-bwpucIq5xKDh-1370671817.eu-west-2.elb.amazonaws.com/openapi.json  # Location of the OpenAPI spec
+inputSpec: http://prod-u-uncer-bwpucIq5xKDh-1370671817.eu-west-2.elb.amazonaws.com/openapi.json  # Location of the OpenAPI spec (prod)
 outputDir: .  # Directory to generate the code in
 
 packageName: uncertainty_engine_resource_client # Name of client package
