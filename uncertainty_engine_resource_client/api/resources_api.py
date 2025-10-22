@@ -2173,6 +2173,7 @@ class ResourcesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ResourceResponse",
+            "201": "ResourceResponse",
             '422': "HTTPValidationError",
         }
         response_data = self.api_client.call_api(

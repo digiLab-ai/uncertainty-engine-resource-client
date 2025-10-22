@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** |  | [optional] 
 **name** | **str** |  | 
+**description** | **str** |  | [optional] 
 **project_id** | **str** |  | [optional] 
 **owner_id** | **str** |  | 
 **versions** | **List[str]** |  | [optional] [default to []]

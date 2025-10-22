@@ -7,6 +7,7 @@ docs/AccountResponse.md
 docs/AuthApi.md
 docs/DefaultApi.md
 docs/GetAccountRecordProjectsResponse.md
+docs/GetProjectRecordsResponse.md
 docs/GetResourceRecordsResponse.md
 docs/GetResourceVersionRecordsResponse.md
 docs/GetResourceVersionResponse.md
@@ -69,6 +70,7 @@ uncertainty_engine_resource_client/models/account_record_input.py
 uncertainty_engine_resource_client/models/account_record_output.py
 uncertainty_engine_resource_client/models/account_response.py
 uncertainty_engine_resource_client/models/get_account_record_projects_response.py
+uncertainty_engine_resource_client/models/get_project_records_response.py
 uncertainty_engine_resource_client/models/get_resource_records_response.py
 uncertainty_engine_resource_client/models/get_resource_version_records_response.py
 uncertainty_engine_resource_client/models/get_resource_version_response.py

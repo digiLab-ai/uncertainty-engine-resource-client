@@ -5,6 +5,7 @@ All URIs are relative to *https://tu8vus047g.execute-api.eu-west-2.amazonaws.com
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**delete_project_record**](ProjectRecordsApi.md#delete_project_record) | **DELETE** /api/projects/{project_id} | Delete Project Record
+[**get_account_project_records**](ProjectRecordsApi.md#get_account_project_records) | **GET** /api/projects | Get Account Project Records
 [**get_project_record_id**](ProjectRecordsApi.md#get_project_record_id) | **GET** /api/projects/{project_id} | Get Project Record Id
 [**patch_project_record**](ProjectRecordsApi.md#patch_project_record) | **PATCH** /api/projects/{project_id}/name | Patch Project Record Name
 [**post_project_record**](ProjectRecordsApi.md#post_project_record) | **POST** /api/projects | Post Project Record
@@ -75,6 +76,70 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | Successful Response |  -  |
 **422** | Validation Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_account_project_records**
+> GetProjectRecordsResponse get_account_project_records()
+
+Get Account Project Records
+
+Get all projects for an account.
+
+### Example
+
+
+```python
+import uncertainty_engine_resource_client
+from uncertainty_engine_resource_client.models.get_project_records_response import GetProjectRecordsResponse
+from uncertainty_engine_resource_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://tu8vus047g.execute-api.eu-west-2.amazonaws.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = uncertainty_engine_resource_client.Configuration(
+    host = "https://tu8vus047g.execute-api.eu-west-2.amazonaws.com"
+)
+
+
+# Enter a context with an instance of the API client
+with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = uncertainty_engine_resource_client.ProjectRecordsApi(api_client)
+
+    try:
+        # Get Account Project Records
+        api_response = api_instance.get_account_project_records()
+        print("The response of ProjectRecordsApi->get_account_project_records:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ProjectRecordsApi->get_account_project_records: %s\n" % e)
+```
+
+
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**GetProjectRecordsResponse**](GetProjectRecordsResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

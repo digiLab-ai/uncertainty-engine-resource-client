@@ -29,12 +29,13 @@ class WorkflowRecordInput(BaseModel):
     """ # noqa: E501
     id: Optional[Any] = Field(default=None, alias="_id")
     name: StrictStr
+    description: Optional[StrictStr] = None
     project_id: Optional[Any] = None
     owner_id: Optional[Any]
     versions: Optional[List[Any]] = None
     created_at: Optional[datetime] = None
     is_locked: Optional[StrictBool] = False
-    __properties: ClassVar[List[str]] = ["_id", "name", "project_id", "owner_id", "versions", "created_at", "is_locked"]
+    __properties: ClassVar[List[str]] = ["_id", "name", "description", "project_id", "owner_id", "versions", "created_at", "is_locked"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -80,6 +81,11 @@ class WorkflowRecordInput(BaseModel):
         if self.id is None and "id" in self.model_fields_set:
             _dict['_id'] = None
 
+        # set to None if description (nullable) is None
+        # and model_fields_set contains the field
+        if self.description is None and "description" in self.model_fields_set:
+            _dict['description'] = None
+
         # set to None if project_id (nullable) is None
         # and model_fields_set contains the field
         if self.project_id is None and "project_id" in self.model_fields_set:
@@ -104,6 +110,7 @@ class WorkflowRecordInput(BaseModel):
         _obj = cls.model_validate({
             "_id": obj.get("_id"),
             "name": obj.get("name"),
+            "description": obj.get("description"),
             "project_id": obj.get("project_id"),
             "owner_id": obj.get("owner_id"),
             "versions": obj.get("versions"),
