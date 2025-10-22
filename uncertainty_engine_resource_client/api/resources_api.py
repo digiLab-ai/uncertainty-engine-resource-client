@@ -12,32 +12,22 @@
 """  # noqa: E501
 
 import warnings
+from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
 from typing import Any, Dict, List, Optional, Tuple, Union
-
-from pydantic import Field, StrictFloat, StrictInt, StrictStr, validate_call
 from typing_extensions import Annotated
+
+from pydantic import StrictStr
+from typing import Any
+from uncertainty_engine_resource_client.models.get_resource_records_response import GetResourceRecordsResponse
+from uncertainty_engine_resource_client.models.get_resource_version_records_response import GetResourceVersionRecordsResponse
+from uncertainty_engine_resource_client.models.get_resource_version_response import GetResourceVersionResponse
+from uncertainty_engine_resource_client.models.post_resource_record_request import PostResourceRecordRequest
+from uncertainty_engine_resource_client.models.post_resource_version_request import PostResourceVersionRequest
+from uncertainty_engine_resource_client.models.post_resource_version_response import PostResourceVersionResponse
+from uncertainty_engine_resource_client.models.resource_response import ResourceResponse
 
 from uncertainty_engine_resource_client.api_client import ApiClient, RequestSerialized
 from uncertainty_engine_resource_client.api_response import ApiResponse
-from uncertainty_engine_resource_client.models.get_resource_records_response import (
-    GetResourceRecordsResponse,
-)
-from uncertainty_engine_resource_client.models.get_resource_version_records_response import (
-    GetResourceVersionRecordsResponse,
-)
-from uncertainty_engine_resource_client.models.get_resource_version_response import (
-    GetResourceVersionResponse,
-)
-from uncertainty_engine_resource_client.models.post_resource_record_request import (
-    PostResourceRecordRequest,
-)
-from uncertainty_engine_resource_client.models.post_resource_version_request import (
-    PostResourceVersionRequest,
-)
-from uncertainty_engine_resource_client.models.post_resource_version_response import (
-    PostResourceVersionResponse,
-)
-from uncertainty_engine_resource_client.models.resource_response import ResourceResponse
 from uncertainty_engine_resource_client.rest import RESTResponseType
 
 
@@ -53,6 +43,7 @@ class ResourcesApi:
             api_client = ApiClient.get_default()
         self.api_client = api_client
 
+
     @validate_call
     def delete_resource_record(
         self,
@@ -63,8 +54,9 @@ class ResourcesApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -101,7 +93,7 @@ class ResourcesApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """  # noqa: E501
+        """ # noqa: E501
 
         _param = self._delete_resource_record_serialize(
             project_id=project_id,
@@ -110,21 +102,23 @@ class ResourcesApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index,
+            _host_index=_host_index
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "object",
-            "422": "HTTPValidationError",
+            '200': "object",
+            '422': "HTTPValidationError",
         }
         response_data = self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
+            *_param,
+            _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         ).data
+
 
     @validate_call
     def delete_resource_record_with_http_info(
@@ -136,8 +130,9 @@ class ResourcesApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -174,7 +169,7 @@ class ResourcesApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """  # noqa: E501
+        """ # noqa: E501
 
         _param = self._delete_resource_record_serialize(
             project_id=project_id,
@@ -183,21 +178,23 @@ class ResourcesApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index,
+            _host_index=_host_index
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "object",
-            "422": "HTTPValidationError",
+            '200': "object",
+            '422': "HTTPValidationError",
         }
         response_data = self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
+            *_param,
+            _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         )
+
 
     @validate_call
     def delete_resource_record_without_preload_content(
@@ -209,8 +206,9 @@ class ResourcesApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -247,7 +245,7 @@ class ResourcesApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """  # noqa: E501
+        """ # noqa: E501
 
         _param = self._delete_resource_record_serialize(
             project_id=project_id,
@@ -256,17 +254,19 @@ class ResourcesApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index,
+            _host_index=_host_index
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "object",
-            "422": "HTTPValidationError",
+            '200': "object",
+            '422': "HTTPValidationError",
         }
         response_data = self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
+            *_param,
+            _request_timeout=_request_timeout
         )
         return response_data.response
+
 
     def _delete_resource_record_serialize(
         self,
@@ -281,7 +281,8 @@ class ResourcesApi:
 
         _host = None
 
-        _collection_formats: Dict[str, str] = {}
+        _collection_formats: Dict[str, str] = {
+        }
 
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
@@ -294,28 +295,33 @@ class ResourcesApi:
 
         # process the path parameters
         if project_id is not None:
-            _path_params["project_id"] = project_id
+            _path_params['project_id'] = project_id
         if resource_type is not None:
-            _path_params["resource_type"] = resource_type
+            _path_params['resource_type'] = resource_type
         if resource_id is not None:
-            _path_params["resource_id"] = resource_id
+            _path_params['resource_id'] = resource_id
         # process the query parameters
         # process the header parameters
         # process the form parameters
         # process the body parameter
 
+
         # set the HTTP header `Accept`
-        if "Accept" not in _header_params:
-            _header_params["Accept"] = self.api_client.select_header_accept(
-                ["application/json"]
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
             )
 
+
         # authentication setting
-        _auth_settings: List[str] = []
+        _auth_settings: List[str] = [
+        ]
 
         return self.api_client.param_serialize(
-            method="DELETE",
-            resource_path="/api/projects/{project_id}/resources/{resource_type}/{resource_id}",
+            method='DELETE',
+            resource_path='/api/projects/{project_id}/resources/{resource_type}/{resource_id}',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -325,8 +331,11 @@ class ResourcesApi:
             auth_settings=_auth_settings,
             collection_formats=_collection_formats,
             _host=_host,
-            _request_auth=_request_auth,
+            _request_auth=_request_auth
         )
+
+
+
 
     @validate_call
     def delete_resource_version_record(
@@ -339,8 +348,9 @@ class ResourcesApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -379,7 +389,7 @@ class ResourcesApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """  # noqa: E501
+        """ # noqa: E501
 
         _param = self._delete_resource_version_record_serialize(
             project_id=project_id,
@@ -389,21 +399,23 @@ class ResourcesApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index,
+            _host_index=_host_index
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "object",
-            "422": "HTTPValidationError",
+            '200': "object",
+            '422': "HTTPValidationError",
         }
         response_data = self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
+            *_param,
+            _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         ).data
+
 
     @validate_call
     def delete_resource_version_record_with_http_info(
@@ -416,8 +428,9 @@ class ResourcesApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -456,7 +469,7 @@ class ResourcesApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """  # noqa: E501
+        """ # noqa: E501
 
         _param = self._delete_resource_version_record_serialize(
             project_id=project_id,
@@ -466,21 +479,23 @@ class ResourcesApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index,
+            _host_index=_host_index
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "object",
-            "422": "HTTPValidationError",
+            '200': "object",
+            '422': "HTTPValidationError",
         }
         response_data = self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
+            *_param,
+            _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         )
+
 
     @validate_call
     def delete_resource_version_record_without_preload_content(
@@ -493,8 +508,9 @@ class ResourcesApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -533,7 +549,7 @@ class ResourcesApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """  # noqa: E501
+        """ # noqa: E501
 
         _param = self._delete_resource_version_record_serialize(
             project_id=project_id,
@@ -543,17 +559,19 @@ class ResourcesApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index,
+            _host_index=_host_index
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "object",
-            "422": "HTTPValidationError",
+            '200': "object",
+            '422': "HTTPValidationError",
         }
         response_data = self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
+            *_param,
+            _request_timeout=_request_timeout
         )
         return response_data.response
+
 
     def _delete_resource_version_record_serialize(
         self,
@@ -569,7 +587,8 @@ class ResourcesApi:
 
         _host = None
 
-        _collection_formats: Dict[str, str] = {}
+        _collection_formats: Dict[str, str] = {
+        }
 
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
@@ -582,30 +601,35 @@ class ResourcesApi:
 
         # process the path parameters
         if project_id is not None:
-            _path_params["project_id"] = project_id
+            _path_params['project_id'] = project_id
         if resource_type is not None:
-            _path_params["resource_type"] = resource_type
+            _path_params['resource_type'] = resource_type
         if resource_id is not None:
-            _path_params["resource_id"] = resource_id
+            _path_params['resource_id'] = resource_id
         if resource_version_id is not None:
-            _path_params["resource_version_id"] = resource_version_id
+            _path_params['resource_version_id'] = resource_version_id
         # process the query parameters
         # process the header parameters
         # process the form parameters
         # process the body parameter
 
+
         # set the HTTP header `Accept`
-        if "Accept" not in _header_params:
-            _header_params["Accept"] = self.api_client.select_header_accept(
-                ["application/json"]
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
             )
 
+
         # authentication setting
-        _auth_settings: List[str] = []
+        _auth_settings: List[str] = [
+        ]
 
         return self.api_client.param_serialize(
-            method="DELETE",
-            resource_path="/api/projects/{project_id}/resources/{resource_type}/{resource_id}/versions/{resource_version_id}",
+            method='DELETE',
+            resource_path='/api/projects/{project_id}/resources/{resource_type}/{resource_id}/versions/{resource_version_id}',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -615,8 +639,11 @@ class ResourcesApi:
             auth_settings=_auth_settings,
             collection_formats=_collection_formats,
             _host=_host,
-            _request_auth=_request_auth,
+            _request_auth=_request_auth
         )
+
+
+
 
     @validate_call
     def get_latest_resource_version(
@@ -628,8 +655,9 @@ class ResourcesApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -666,7 +694,7 @@ class ResourcesApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """  # noqa: E501
+        """ # noqa: E501
 
         _param = self._get_latest_resource_version_serialize(
             project_id=project_id,
@@ -675,21 +703,23 @@ class ResourcesApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index,
+            _host_index=_host_index
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "GetResourceVersionResponse",
-            "422": "HTTPValidationError",
+            '200': "GetResourceVersionResponse",
+            '422': "HTTPValidationError",
         }
         response_data = self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
+            *_param,
+            _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         ).data
+
 
     @validate_call
     def get_latest_resource_version_with_http_info(
@@ -701,8 +731,9 @@ class ResourcesApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -739,7 +770,7 @@ class ResourcesApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """  # noqa: E501
+        """ # noqa: E501
 
         _param = self._get_latest_resource_version_serialize(
             project_id=project_id,
@@ -748,21 +779,23 @@ class ResourcesApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index,
+            _host_index=_host_index
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "GetResourceVersionResponse",
-            "422": "HTTPValidationError",
+            '200': "GetResourceVersionResponse",
+            '422': "HTTPValidationError",
         }
         response_data = self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
+            *_param,
+            _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         )
+
 
     @validate_call
     def get_latest_resource_version_without_preload_content(
@@ -774,8 +807,9 @@ class ResourcesApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -812,7 +846,7 @@ class ResourcesApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """  # noqa: E501
+        """ # noqa: E501
 
         _param = self._get_latest_resource_version_serialize(
             project_id=project_id,
@@ -821,17 +855,19 @@ class ResourcesApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index,
+            _host_index=_host_index
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "GetResourceVersionResponse",
-            "422": "HTTPValidationError",
+            '200': "GetResourceVersionResponse",
+            '422': "HTTPValidationError",
         }
         response_data = self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
+            *_param,
+            _request_timeout=_request_timeout
         )
         return response_data.response
+
 
     def _get_latest_resource_version_serialize(
         self,
@@ -846,7 +882,8 @@ class ResourcesApi:
 
         _host = None
 
-        _collection_formats: Dict[str, str] = {}
+        _collection_formats: Dict[str, str] = {
+        }
 
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
@@ -859,28 +896,33 @@ class ResourcesApi:
 
         # process the path parameters
         if project_id is not None:
-            _path_params["project_id"] = project_id
+            _path_params['project_id'] = project_id
         if resource_type is not None:
-            _path_params["resource_type"] = resource_type
+            _path_params['resource_type'] = resource_type
         if resource_id is not None:
-            _path_params["resource_id"] = resource_id
+            _path_params['resource_id'] = resource_id
         # process the query parameters
         # process the header parameters
         # process the form parameters
         # process the body parameter
 
+
         # set the HTTP header `Accept`
-        if "Accept" not in _header_params:
-            _header_params["Accept"] = self.api_client.select_header_accept(
-                ["application/json"]
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
             )
 
+
         # authentication setting
-        _auth_settings: List[str] = []
+        _auth_settings: List[str] = [
+        ]
 
         return self.api_client.param_serialize(
-            method="GET",
-            resource_path="/api/projects/{project_id}/resources/{resource_type}/{resource_id}/latest",
+            method='GET',
+            resource_path='/api/projects/{project_id}/resources/{resource_type}/{resource_id}/latest',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -890,8 +932,11 @@ class ResourcesApi:
             auth_settings=_auth_settings,
             collection_formats=_collection_formats,
             _host=_host,
-            _request_auth=_request_auth,
+            _request_auth=_request_auth
         )
+
+
+
 
     @validate_call
     def get_project_resource_records(
@@ -902,8 +947,9 @@ class ResourcesApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -938,7 +984,7 @@ class ResourcesApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """  # noqa: E501
+        """ # noqa: E501
 
         _param = self._get_project_resource_records_serialize(
             project_id=project_id,
@@ -946,21 +992,23 @@ class ResourcesApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index,
+            _host_index=_host_index
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "GetResourceRecordsResponse",
-            "422": "HTTPValidationError",
+            '200': "GetResourceRecordsResponse",
+            '422': "HTTPValidationError",
         }
         response_data = self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
+            *_param,
+            _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         ).data
+
 
     @validate_call
     def get_project_resource_records_with_http_info(
@@ -971,8 +1019,9 @@ class ResourcesApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -1007,7 +1056,7 @@ class ResourcesApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """  # noqa: E501
+        """ # noqa: E501
 
         _param = self._get_project_resource_records_serialize(
             project_id=project_id,
@@ -1015,21 +1064,23 @@ class ResourcesApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index,
+            _host_index=_host_index
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "GetResourceRecordsResponse",
-            "422": "HTTPValidationError",
+            '200': "GetResourceRecordsResponse",
+            '422': "HTTPValidationError",
         }
         response_data = self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
+            *_param,
+            _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         )
+
 
     @validate_call
     def get_project_resource_records_without_preload_content(
@@ -1040,8 +1091,9 @@ class ResourcesApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -1076,7 +1128,7 @@ class ResourcesApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """  # noqa: E501
+        """ # noqa: E501
 
         _param = self._get_project_resource_records_serialize(
             project_id=project_id,
@@ -1084,17 +1136,19 @@ class ResourcesApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index,
+            _host_index=_host_index
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "GetResourceRecordsResponse",
-            "422": "HTTPValidationError",
+            '200': "GetResourceRecordsResponse",
+            '422': "HTTPValidationError",
         }
         response_data = self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
+            *_param,
+            _request_timeout=_request_timeout
         )
         return response_data.response
+
 
     def _get_project_resource_records_serialize(
         self,
@@ -1108,7 +1162,8 @@ class ResourcesApi:
 
         _host = None
 
-        _collection_formats: Dict[str, str] = {}
+        _collection_formats: Dict[str, str] = {
+        }
 
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
@@ -1121,26 +1176,31 @@ class ResourcesApi:
 
         # process the path parameters
         if project_id is not None:
-            _path_params["project_id"] = project_id
+            _path_params['project_id'] = project_id
         if resource_type is not None:
-            _path_params["resource_type"] = resource_type
+            _path_params['resource_type'] = resource_type
         # process the query parameters
         # process the header parameters
         # process the form parameters
         # process the body parameter
 
+
         # set the HTTP header `Accept`
-        if "Accept" not in _header_params:
-            _header_params["Accept"] = self.api_client.select_header_accept(
-                ["application/json"]
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
             )
 
+
         # authentication setting
-        _auth_settings: List[str] = []
+        _auth_settings: List[str] = [
+        ]
 
         return self.api_client.param_serialize(
-            method="GET",
-            resource_path="/api/projects/{project_id}/resources/{resource_type}",
+            method='GET',
+            resource_path='/api/projects/{project_id}/resources/{resource_type}',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -1150,8 +1210,11 @@ class ResourcesApi:
             auth_settings=_auth_settings,
             collection_formats=_collection_formats,
             _host=_host,
-            _request_auth=_request_auth,
+            _request_auth=_request_auth
         )
+
+
+
 
     @validate_call
     def get_resource_record(
@@ -1163,8 +1226,9 @@ class ResourcesApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -1201,7 +1265,7 @@ class ResourcesApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """  # noqa: E501
+        """ # noqa: E501
 
         _param = self._get_resource_record_serialize(
             project_id=project_id,
@@ -1210,21 +1274,23 @@ class ResourcesApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index,
+            _host_index=_host_index
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "ResourceResponse",
-            "422": "HTTPValidationError",
+            '200': "ResourceResponse",
+            '422': "HTTPValidationError",
         }
         response_data = self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
+            *_param,
+            _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         ).data
+
 
     @validate_call
     def get_resource_record_with_http_info(
@@ -1236,8 +1302,9 @@ class ResourcesApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -1274,7 +1341,7 @@ class ResourcesApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """  # noqa: E501
+        """ # noqa: E501
 
         _param = self._get_resource_record_serialize(
             project_id=project_id,
@@ -1283,21 +1350,23 @@ class ResourcesApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index,
+            _host_index=_host_index
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "ResourceResponse",
-            "422": "HTTPValidationError",
+            '200': "ResourceResponse",
+            '422': "HTTPValidationError",
         }
         response_data = self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
+            *_param,
+            _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         )
+
 
     @validate_call
     def get_resource_record_without_preload_content(
@@ -1309,8 +1378,9 @@ class ResourcesApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -1347,7 +1417,7 @@ class ResourcesApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """  # noqa: E501
+        """ # noqa: E501
 
         _param = self._get_resource_record_serialize(
             project_id=project_id,
@@ -1356,17 +1426,19 @@ class ResourcesApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index,
+            _host_index=_host_index
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "ResourceResponse",
-            "422": "HTTPValidationError",
+            '200': "ResourceResponse",
+            '422': "HTTPValidationError",
         }
         response_data = self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
+            *_param,
+            _request_timeout=_request_timeout
         )
         return response_data.response
+
 
     def _get_resource_record_serialize(
         self,
@@ -1381,7 +1453,8 @@ class ResourcesApi:
 
         _host = None
 
-        _collection_formats: Dict[str, str] = {}
+        _collection_formats: Dict[str, str] = {
+        }
 
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
@@ -1394,28 +1467,33 @@ class ResourcesApi:
 
         # process the path parameters
         if project_id is not None:
-            _path_params["project_id"] = project_id
+            _path_params['project_id'] = project_id
         if resource_type is not None:
-            _path_params["resource_type"] = resource_type
+            _path_params['resource_type'] = resource_type
         if resource_id is not None:
-            _path_params["resource_id"] = resource_id
+            _path_params['resource_id'] = resource_id
         # process the query parameters
         # process the header parameters
         # process the form parameters
         # process the body parameter
 
+
         # set the HTTP header `Accept`
-        if "Accept" not in _header_params:
-            _header_params["Accept"] = self.api_client.select_header_accept(
-                ["application/json"]
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
             )
 
+
         # authentication setting
-        _auth_settings: List[str] = []
+        _auth_settings: List[str] = [
+        ]
 
         return self.api_client.param_serialize(
-            method="GET",
-            resource_path="/api/projects/{project_id}/resources/{resource_type}/{resource_id}",
+            method='GET',
+            resource_path='/api/projects/{project_id}/resources/{resource_type}/{resource_id}',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -1425,8 +1503,11 @@ class ResourcesApi:
             auth_settings=_auth_settings,
             collection_formats=_collection_formats,
             _host=_host,
-            _request_auth=_request_auth,
+            _request_auth=_request_auth
         )
+
+
+
 
     @validate_call
     def get_resource_version(
@@ -1439,8 +1520,9 @@ class ResourcesApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -1479,7 +1561,7 @@ class ResourcesApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """  # noqa: E501
+        """ # noqa: E501
 
         _param = self._get_resource_version_serialize(
             project_id=project_id,
@@ -1489,21 +1571,23 @@ class ResourcesApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index,
+            _host_index=_host_index
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "GetResourceVersionResponse",
-            "422": "HTTPValidationError",
+            '200': "GetResourceVersionResponse",
+            '422': "HTTPValidationError",
         }
         response_data = self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
+            *_param,
+            _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         ).data
+
 
     @validate_call
     def get_resource_version_with_http_info(
@@ -1516,8 +1600,9 @@ class ResourcesApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -1556,7 +1641,7 @@ class ResourcesApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """  # noqa: E501
+        """ # noqa: E501
 
         _param = self._get_resource_version_serialize(
             project_id=project_id,
@@ -1566,21 +1651,23 @@ class ResourcesApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index,
+            _host_index=_host_index
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "GetResourceVersionResponse",
-            "422": "HTTPValidationError",
+            '200': "GetResourceVersionResponse",
+            '422': "HTTPValidationError",
         }
         response_data = self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
+            *_param,
+            _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         )
+
 
     @validate_call
     def get_resource_version_without_preload_content(
@@ -1593,8 +1680,9 @@ class ResourcesApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -1633,7 +1721,7 @@ class ResourcesApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """  # noqa: E501
+        """ # noqa: E501
 
         _param = self._get_resource_version_serialize(
             project_id=project_id,
@@ -1643,17 +1731,19 @@ class ResourcesApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index,
+            _host_index=_host_index
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "GetResourceVersionResponse",
-            "422": "HTTPValidationError",
+            '200': "GetResourceVersionResponse",
+            '422': "HTTPValidationError",
         }
         response_data = self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
+            *_param,
+            _request_timeout=_request_timeout
         )
         return response_data.response
+
 
     def _get_resource_version_serialize(
         self,
@@ -1669,7 +1759,8 @@ class ResourcesApi:
 
         _host = None
 
-        _collection_formats: Dict[str, str] = {}
+        _collection_formats: Dict[str, str] = {
+        }
 
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
@@ -1682,30 +1773,35 @@ class ResourcesApi:
 
         # process the path parameters
         if project_id is not None:
-            _path_params["project_id"] = project_id
+            _path_params['project_id'] = project_id
         if resource_type is not None:
-            _path_params["resource_type"] = resource_type
+            _path_params['resource_type'] = resource_type
         if resource_id is not None:
-            _path_params["resource_id"] = resource_id
+            _path_params['resource_id'] = resource_id
         if resource_version_id is not None:
-            _path_params["resource_version_id"] = resource_version_id
+            _path_params['resource_version_id'] = resource_version_id
         # process the query parameters
         # process the header parameters
         # process the form parameters
         # process the body parameter
 
+
         # set the HTTP header `Accept`
-        if "Accept" not in _header_params:
-            _header_params["Accept"] = self.api_client.select_header_accept(
-                ["application/json"]
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
             )
 
+
         # authentication setting
-        _auth_settings: List[str] = []
+        _auth_settings: List[str] = [
+        ]
 
         return self.api_client.param_serialize(
-            method="GET",
-            resource_path="/api/projects/{project_id}/resources/{resource_type}/{resource_id}/versions/{resource_version_id}",
+            method='GET',
+            resource_path='/api/projects/{project_id}/resources/{resource_type}/{resource_id}/versions/{resource_version_id}',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -1715,8 +1811,11 @@ class ResourcesApi:
             auth_settings=_auth_settings,
             collection_formats=_collection_formats,
             _host=_host,
-            _request_auth=_request_auth,
+            _request_auth=_request_auth
         )
+
+
+
 
     @validate_call
     def get_resource_version_records(
@@ -1728,8 +1827,9 @@ class ResourcesApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -1766,7 +1866,7 @@ class ResourcesApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """  # noqa: E501
+        """ # noqa: E501
 
         _param = self._get_resource_version_records_serialize(
             project_id=project_id,
@@ -1775,21 +1875,23 @@ class ResourcesApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index,
+            _host_index=_host_index
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "GetResourceVersionRecordsResponse",
-            "422": "HTTPValidationError",
+            '200': "GetResourceVersionRecordsResponse",
+            '422': "HTTPValidationError",
         }
         response_data = self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
+            *_param,
+            _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         ).data
+
 
     @validate_call
     def get_resource_version_records_with_http_info(
@@ -1801,8 +1903,9 @@ class ResourcesApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -1839,7 +1942,7 @@ class ResourcesApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """  # noqa: E501
+        """ # noqa: E501
 
         _param = self._get_resource_version_records_serialize(
             project_id=project_id,
@@ -1848,21 +1951,23 @@ class ResourcesApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index,
+            _host_index=_host_index
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "GetResourceVersionRecordsResponse",
-            "422": "HTTPValidationError",
+            '200': "GetResourceVersionRecordsResponse",
+            '422': "HTTPValidationError",
         }
         response_data = self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
+            *_param,
+            _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         )
+
 
     @validate_call
     def get_resource_version_records_without_preload_content(
@@ -1874,8 +1979,9 @@ class ResourcesApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -1912,7 +2018,7 @@ class ResourcesApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """  # noqa: E501
+        """ # noqa: E501
 
         _param = self._get_resource_version_records_serialize(
             project_id=project_id,
@@ -1921,17 +2027,19 @@ class ResourcesApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index,
+            _host_index=_host_index
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "GetResourceVersionRecordsResponse",
-            "422": "HTTPValidationError",
+            '200': "GetResourceVersionRecordsResponse",
+            '422': "HTTPValidationError",
         }
         response_data = self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
+            *_param,
+            _request_timeout=_request_timeout
         )
         return response_data.response
+
 
     def _get_resource_version_records_serialize(
         self,
@@ -1946,7 +2054,8 @@ class ResourcesApi:
 
         _host = None
 
-        _collection_formats: Dict[str, str] = {}
+        _collection_formats: Dict[str, str] = {
+        }
 
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
@@ -1959,28 +2068,33 @@ class ResourcesApi:
 
         # process the path parameters
         if project_id is not None:
-            _path_params["project_id"] = project_id
+            _path_params['project_id'] = project_id
         if resource_type is not None:
-            _path_params["resource_type"] = resource_type
+            _path_params['resource_type'] = resource_type
         if resource_id is not None:
-            _path_params["resource_id"] = resource_id
+            _path_params['resource_id'] = resource_id
         # process the query parameters
         # process the header parameters
         # process the form parameters
         # process the body parameter
 
+
         # set the HTTP header `Accept`
-        if "Accept" not in _header_params:
-            _header_params["Accept"] = self.api_client.select_header_accept(
-                ["application/json"]
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
             )
 
+
         # authentication setting
-        _auth_settings: List[str] = []
+        _auth_settings: List[str] = [
+        ]
 
         return self.api_client.param_serialize(
-            method="GET",
-            resource_path="/api/projects/{project_id}/resources/{resource_type}/{resource_id}/versions",
+            method='GET',
+            resource_path='/api/projects/{project_id}/resources/{resource_type}/{resource_id}/versions',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -1990,8 +2104,11 @@ class ResourcesApi:
             auth_settings=_auth_settings,
             collection_formats=_collection_formats,
             _host=_host,
-            _request_auth=_request_auth,
+            _request_auth=_request_auth
         )
+
+
+
 
     @validate_call
     def post_resource_record(
@@ -2003,8 +2120,9 @@ class ResourcesApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -2041,7 +2159,7 @@ class ResourcesApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """  # noqa: E501
+        """ # noqa: E501
 
         _param = self._post_resource_record_serialize(
             project_id=project_id,
@@ -2050,22 +2168,23 @@ class ResourcesApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index,
+            _host_index=_host_index
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "ResourceResponse",
-            "201": "ResourceResponse",
-            "422": "HTTPValidationError",
+            '200': "ResourceResponse",
+            '422': "HTTPValidationError",
         }
         response_data = self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
+            *_param,
+            _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         ).data
+
 
     @validate_call
     def post_resource_record_with_http_info(
@@ -2077,8 +2196,9 @@ class ResourcesApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -2115,7 +2235,7 @@ class ResourcesApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """  # noqa: E501
+        """ # noqa: E501
 
         _param = self._post_resource_record_serialize(
             project_id=project_id,
@@ -2124,21 +2244,23 @@ class ResourcesApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index,
+            _host_index=_host_index
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "201": "ResourceResponse",
-            "422": "HTTPValidationError",
+            '200': "ResourceResponse",
+            '422': "HTTPValidationError",
         }
         response_data = self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
+            *_param,
+            _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         )
+
 
     @validate_call
     def post_resource_record_without_preload_content(
@@ -2150,8 +2272,9 @@ class ResourcesApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -2188,7 +2311,7 @@ class ResourcesApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """  # noqa: E501
+        """ # noqa: E501
 
         _param = self._post_resource_record_serialize(
             project_id=project_id,
@@ -2197,17 +2320,19 @@ class ResourcesApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index,
+            _host_index=_host_index
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "201": "ResourceResponse",
-            "422": "HTTPValidationError",
+            '200': "ResourceResponse",
+            '422': "HTTPValidationError",
         }
         response_data = self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
+            *_param,
+            _request_timeout=_request_timeout
         )
         return response_data.response
+
 
     def _post_resource_record_serialize(
         self,
@@ -2222,7 +2347,8 @@ class ResourcesApi:
 
         _host = None
 
-        _collection_formats: Dict[str, str] = {}
+        _collection_formats: Dict[str, str] = {
+        }
 
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
@@ -2235,9 +2361,9 @@ class ResourcesApi:
 
         # process the path parameters
         if project_id is not None:
-            _path_params["project_id"] = project_id
+            _path_params['project_id'] = project_id
         if resource_type is not None:
-            _path_params["resource_type"] = resource_type
+            _path_params['resource_type'] = resource_type
         # process the query parameters
         # process the header parameters
         # process the form parameters
@@ -2245,28 +2371,36 @@ class ResourcesApi:
         if post_resource_record_request is not None:
             _body_params = post_resource_record_request
 
+
         # set the HTTP header `Accept`
-        if "Accept" not in _header_params:
-            _header_params["Accept"] = self.api_client.select_header_accept(
-                ["application/json"]
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
             )
 
         # set the HTTP header `Content-Type`
         if _content_type:
-            _header_params["Content-Type"] = _content_type
+            _header_params['Content-Type'] = _content_type
         else:
-            _default_content_type = self.api_client.select_header_content_type(
-                ["application/json"]
+            _default_content_type = (
+                self.api_client.select_header_content_type(
+                    [
+                        'application/json'
+                    ]
+                )
             )
             if _default_content_type is not None:
-                _header_params["Content-Type"] = _default_content_type
+                _header_params['Content-Type'] = _default_content_type
 
         # authentication setting
-        _auth_settings: List[str] = []
+        _auth_settings: List[str] = [
+        ]
 
         return self.api_client.param_serialize(
-            method="POST",
-            resource_path="/api/projects/{project_id}/resources/{resource_type}",
+            method='POST',
+            resource_path='/api/projects/{project_id}/resources/{resource_type}',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -2276,8 +2410,11 @@ class ResourcesApi:
             auth_settings=_auth_settings,
             collection_formats=_collection_formats,
             _host=_host,
-            _request_auth=_request_auth,
+            _request_auth=_request_auth
         )
+
+
+
 
     @validate_call
     def post_resource_version(
@@ -2290,8 +2427,9 @@ class ResourcesApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -2330,7 +2468,7 @@ class ResourcesApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """  # noqa: E501
+        """ # noqa: E501
 
         _param = self._post_resource_version_serialize(
             project_id=project_id,
@@ -2340,21 +2478,23 @@ class ResourcesApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index,
+            _host_index=_host_index
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "PostResourceVersionResponse",
-            "422": "HTTPValidationError",
+            '200': "PostResourceVersionResponse",
+            '422': "HTTPValidationError",
         }
         response_data = self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
+            *_param,
+            _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         ).data
+
 
     @validate_call
     def post_resource_version_with_http_info(
@@ -2367,8 +2507,9 @@ class ResourcesApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -2407,7 +2548,7 @@ class ResourcesApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """  # noqa: E501
+        """ # noqa: E501
 
         _param = self._post_resource_version_serialize(
             project_id=project_id,
@@ -2417,21 +2558,23 @@ class ResourcesApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index,
+            _host_index=_host_index
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "PostResourceVersionResponse",
-            "422": "HTTPValidationError",
+            '200': "PostResourceVersionResponse",
+            '422': "HTTPValidationError",
         }
         response_data = self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
+            *_param,
+            _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         )
+
 
     @validate_call
     def post_resource_version_without_preload_content(
@@ -2444,8 +2587,9 @@ class ResourcesApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -2484,7 +2628,7 @@ class ResourcesApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """  # noqa: E501
+        """ # noqa: E501
 
         _param = self._post_resource_version_serialize(
             project_id=project_id,
@@ -2494,17 +2638,19 @@ class ResourcesApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index,
+            _host_index=_host_index
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "PostResourceVersionResponse",
-            "422": "HTTPValidationError",
+            '200': "PostResourceVersionResponse",
+            '422': "HTTPValidationError",
         }
         response_data = self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
+            *_param,
+            _request_timeout=_request_timeout
         )
         return response_data.response
+
 
     def _post_resource_version_serialize(
         self,
@@ -2520,7 +2666,8 @@ class ResourcesApi:
 
         _host = None
 
-        _collection_formats: Dict[str, str] = {}
+        _collection_formats: Dict[str, str] = {
+        }
 
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
@@ -2533,11 +2680,11 @@ class ResourcesApi:
 
         # process the path parameters
         if project_id is not None:
-            _path_params["project_id"] = project_id
+            _path_params['project_id'] = project_id
         if resource_type is not None:
-            _path_params["resource_type"] = resource_type
+            _path_params['resource_type'] = resource_type
         if resource_id is not None:
-            _path_params["resource_id"] = resource_id
+            _path_params['resource_id'] = resource_id
         # process the query parameters
         # process the header parameters
         # process the form parameters
@@ -2545,28 +2692,36 @@ class ResourcesApi:
         if post_resource_version_request is not None:
             _body_params = post_resource_version_request
 
+
         # set the HTTP header `Accept`
-        if "Accept" not in _header_params:
-            _header_params["Accept"] = self.api_client.select_header_accept(
-                ["application/json"]
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
             )
 
         # set the HTTP header `Content-Type`
         if _content_type:
-            _header_params["Content-Type"] = _content_type
+            _header_params['Content-Type'] = _content_type
         else:
-            _default_content_type = self.api_client.select_header_content_type(
-                ["application/json"]
+            _default_content_type = (
+                self.api_client.select_header_content_type(
+                    [
+                        'application/json'
+                    ]
+                )
             )
             if _default_content_type is not None:
-                _header_params["Content-Type"] = _default_content_type
+                _header_params['Content-Type'] = _default_content_type
 
         # authentication setting
-        _auth_settings: List[str] = []
+        _auth_settings: List[str] = [
+        ]
 
         return self.api_client.param_serialize(
-            method="POST",
-            resource_path="/api/projects/{project_id}/resources/{resource_type}/{resource_id}/versions",
+            method='POST',
+            resource_path='/api/projects/{project_id}/resources/{resource_type}/{resource_id}/versions',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -2576,8 +2731,11 @@ class ResourcesApi:
             auth_settings=_auth_settings,
             collection_formats=_collection_formats,
             _host=_host,
-            _request_auth=_request_auth,
+            _request_auth=_request_auth
         )
+
+
+
 
     @validate_call
     def put_upload_resource_version(
@@ -2590,8 +2748,9 @@ class ResourcesApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -2630,7 +2789,7 @@ class ResourcesApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """  # noqa: E501
+        """ # noqa: E501
 
         _param = self._put_upload_resource_version_serialize(
             project_id=project_id,
@@ -2640,21 +2799,23 @@ class ResourcesApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index,
+            _host_index=_host_index
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "object",
-            "422": "HTTPValidationError",
+            '200': "object",
+            '422': "HTTPValidationError",
         }
         response_data = self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
+            *_param,
+            _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         ).data
+
 
     @validate_call
     def put_upload_resource_version_with_http_info(
@@ -2667,8 +2828,9 @@ class ResourcesApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -2707,7 +2869,7 @@ class ResourcesApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """  # noqa: E501
+        """ # noqa: E501
 
         _param = self._put_upload_resource_version_serialize(
             project_id=project_id,
@@ -2717,21 +2879,23 @@ class ResourcesApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index,
+            _host_index=_host_index
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "object",
-            "422": "HTTPValidationError",
+            '200': "object",
+            '422': "HTTPValidationError",
         }
         response_data = self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
+            *_param,
+            _request_timeout=_request_timeout
         )
         response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
         )
+
 
     @validate_call
     def put_upload_resource_version_without_preload_content(
@@ -2744,8 +2908,9 @@ class ResourcesApi:
             None,
             Annotated[StrictFloat, Field(gt=0)],
             Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
         ] = None,
         _request_auth: Optional[Dict[StrictStr, Any]] = None,
         _content_type: Optional[StrictStr] = None,
@@ -2784,7 +2949,7 @@ class ResourcesApi:
                             in the spec for a single request.
         :type _host_index: int, optional
         :return: Returns the result object.
-        """  # noqa: E501
+        """ # noqa: E501
 
         _param = self._put_upload_resource_version_serialize(
             project_id=project_id,
@@ -2794,17 +2959,19 @@ class ResourcesApi:
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
-            _host_index=_host_index,
+            _host_index=_host_index
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "object",
-            "422": "HTTPValidationError",
+            '200': "object",
+            '422': "HTTPValidationError",
         }
         response_data = self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
+            *_param,
+            _request_timeout=_request_timeout
         )
         return response_data.response
+
 
     def _put_upload_resource_version_serialize(
         self,
@@ -2820,7 +2987,8 @@ class ResourcesApi:
 
         _host = None
 
-        _collection_formats: Dict[str, str] = {}
+        _collection_formats: Dict[str, str] = {
+        }
 
         _path_params: Dict[str, str] = {}
         _query_params: List[Tuple[str, str]] = []
@@ -2833,30 +3001,35 @@ class ResourcesApi:
 
         # process the path parameters
         if project_id is not None:
-            _path_params["project_id"] = project_id
+            _path_params['project_id'] = project_id
         if resource_type is not None:
-            _path_params["resource_type"] = resource_type
+            _path_params['resource_type'] = resource_type
         if resource_id is not None:
-            _path_params["resource_id"] = resource_id
+            _path_params['resource_id'] = resource_id
         if pending_record_id is not None:
-            _path_params["pending_record_id"] = pending_record_id
+            _path_params['pending_record_id'] = pending_record_id
         # process the query parameters
         # process the header parameters
         # process the form parameters
         # process the body parameter
 
+
         # set the HTTP header `Accept`
-        if "Accept" not in _header_params:
-            _header_params["Accept"] = self.api_client.select_header_accept(
-                ["application/json"]
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
             )
 
+
         # authentication setting
-        _auth_settings: List[str] = []
+        _auth_settings: List[str] = [
+        ]
 
         return self.api_client.param_serialize(
-            method="PUT",
-            resource_path="/api/projects/{project_id}/resources/{resource_type}/{resource_id}/pending/{pending_record_id}",
+            method='PUT',
+            resource_path='/api/projects/{project_id}/resources/{resource_type}/{resource_id}/pending/{pending_record_id}',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -2866,5 +3039,7 @@ class ResourcesApi:
             auth_settings=_auth_settings,
             collection_formats=_collection_formats,
             _host=_host,
-            _request_auth=_request_auth,
+            _request_auth=_request_auth
         )
+
+
