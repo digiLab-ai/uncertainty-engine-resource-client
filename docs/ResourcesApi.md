@@ -45,9 +45,9 @@ configuration = uncertainty_engine_resource_client.Configuration(
 with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = uncertainty_engine_resource_client.ResourcesApi(api_client)
-    project_id = 'project_id_example' # str | 
-    resource_type = 'resource_type_example' # str | 
-    resource_id = 'resource_id_example' # str | 
+    project_id = 'project_id_example' # str |
+    resource_type = 'resource_type_example' # str |
+    resource_id = 'resource_id_example' # str |
 
     try:
         # Delete Resource
@@ -65,9 +65,9 @@ with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_id** | **str**|  | 
- **resource_type** | **str**|  | 
- **resource_id** | **str**|  | 
+ **project_id** | **str**|  |
+ **resource_type** | **str**|  |
+ **resource_id** | **str**|  |
 
 ### Return type
 
@@ -120,10 +120,10 @@ configuration = uncertainty_engine_resource_client.Configuration(
 with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = uncertainty_engine_resource_client.ResourcesApi(api_client)
-    project_id = 'project_id_example' # str | 
-    resource_type = 'resource_type_example' # str | 
-    resource_id = 'resource_id_example' # str | 
-    resource_version_id = 'resource_version_id_example' # str | 
+    project_id = 'project_id_example' # str |
+    resource_type = 'resource_type_example' # str |
+    resource_id = 'resource_id_example' # str |
+    resource_version_id = 'resource_version_id_example' # str |
 
     try:
         # Delete Resource Version
@@ -141,10 +141,10 @@ with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_id** | **str**|  | 
- **resource_type** | **str**|  | 
- **resource_id** | **str**|  | 
- **resource_version_id** | **str**|  | 
+ **project_id** | **str**|  |
+ **resource_type** | **str**|  |
+ **resource_id** | **str**|  |
+ **resource_version_id** | **str**|  |
 
 ### Return type
 
@@ -198,9 +198,9 @@ configuration = uncertainty_engine_resource_client.Configuration(
 with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = uncertainty_engine_resource_client.ResourcesApi(api_client)
-    project_id = 'project_id_example' # str | 
-    resource_type = 'resource_type_example' # str | 
-    resource_id = 'resource_id_example' # str | 
+    project_id = 'project_id_example' # str |
+    resource_type = 'resource_type_example' # str |
+    resource_id = 'resource_id_example' # str |
 
     try:
         # Get Latest Resource Version
@@ -218,9 +218,9 @@ with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_id** | **str**|  | 
- **resource_type** | **str**|  | 
- **resource_id** | **str**|  | 
+ **project_id** | **str**|  |
+ **resource_type** | **str**|  |
+ **resource_id** | **str**|  |
 
 ### Return type
 
@@ -275,8 +275,8 @@ configuration = uncertainty_engine_resource_client.Configuration(
 with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = uncertainty_engine_resource_client.ResourcesApi(api_client)
-    project_id = 'project_id_example' # str | 
-    resource_type = 'resource_type_example' # str | 
+    project_id = 'project_id_example' # str |
+    resource_type = 'resource_type_example' # str |
 
     try:
         # Get Project Resource Records
@@ -294,8 +294,8 @@ with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_id** | **str**|  | 
- **resource_type** | **str**|  | 
+ **project_id** | **str**|  |
+ **resource_type** | **str**|  |
 
 ### Return type
 
@@ -349,9 +349,9 @@ configuration = uncertainty_engine_resource_client.Configuration(
 with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = uncertainty_engine_resource_client.ResourcesApi(api_client)
-    project_id = 'project_id_example' # str | 
-    resource_type = 'resource_type_example' # str | 
-    resource_id = 'resource_id_example' # str | 
+    project_id = 'project_id_example' # str |
+    resource_type = 'resource_type_example' # str |
+    resource_id = 'resource_id_example' # str |
 
     try:
         # Get Resource Record
@@ -369,9 +369,9 @@ with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_id** | **str**|  | 
- **resource_type** | **str**|  | 
- **resource_id** | **str**|  | 
+ **project_id** | **str**|  |
+ **resource_type** | **str**|  |
+ **resource_id** | **str**|  |
 
 ### Return type
 
@@ -422,10 +422,10 @@ configuration = uncertainty_engine_resource_client.Configuration(
 with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = uncertainty_engine_resource_client.ResourcesApi(api_client)
-    project_id = 'project_id_example' # str | 
-    resource_type = 'resource_type_example' # str | 
-    resource_id = 'resource_id_example' # str | 
-    resource_version_id = 'resource_version_id_example' # str | 
+    project_id = 'project_id_example' # str |
+    resource_type = 'resource_type_example' # str |
+    resource_id = 'resource_id_example' # str |
+    resource_version_id = 'resource_version_id_example' # str |
 
     try:
         # Get Resource Version
@@ -443,10 +443,10 @@ with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_id** | **str**|  | 
- **resource_type** | **str**|  | 
- **resource_id** | **str**|  | 
- **resource_version_id** | **str**|  | 
+ **project_id** | **str**|  |
+ **resource_type** | **str**|  |
+ **resource_id** | **str**|  |
+ **resource_version_id** | **str**|  |
 
 ### Return type
 
@@ -502,9 +502,9 @@ configuration = uncertainty_engine_resource_client.Configuration(
 with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = uncertainty_engine_resource_client.ResourcesApi(api_client)
-    project_id = 'project_id_example' # str | 
-    resource_type = 'resource_type_example' # str | 
-    resource_id = 'resource_id_example' # str | 
+    project_id = 'project_id_example' # str |
+    resource_type = 'resource_type_example' # str |
+    resource_id = 'resource_id_example' # str |
 
     try:
         # Get Resource Version Records
@@ -522,9 +522,9 @@ with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_id** | **str**|  | 
- **resource_type** | **str**|  | 
- **resource_id** | **str**|  | 
+ **project_id** | **str**|  |
+ **resource_type** | **str**|  |
+ **resource_id** | **str**|  |
 
 ### Return type
 
@@ -580,9 +580,9 @@ configuration = uncertainty_engine_resource_client.Configuration(
 with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = uncertainty_engine_resource_client.ResourcesApi(api_client)
-    project_id = 'project_id_example' # str | 
-    resource_type = 'resource_type_example' # str | 
-    post_resource_record_request = uncertainty_engine_resource_client.PostResourceRecordRequest() # PostResourceRecordRequest | 
+    project_id = 'project_id_example' # str |
+    resource_type = 'resource_type_example' # str |
+    post_resource_record_request = uncertainty_engine_resource_client.PostResourceRecordRequest() # PostResourceRecordRequest |
 
     try:
         # Post Resource Record
@@ -600,9 +600,9 @@ with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_id** | **str**|  | 
- **resource_type** | **str**|  | 
- **post_resource_record_request** | [**PostResourceRecordRequest**](PostResourceRecordRequest.md)|  | 
+ **project_id** | **str**|  |
+ **resource_type** | **str**|  |
+ **post_resource_record_request** | [**PostResourceRecordRequest**](PostResourceRecordRequest.md)|  |
 
 ### Return type
 
@@ -622,6 +622,7 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Successful Response |  -  |
+**201** | Successful Response |  -  |
 **422** | Validation Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -657,10 +658,10 @@ configuration = uncertainty_engine_resource_client.Configuration(
 with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = uncertainty_engine_resource_client.ResourcesApi(api_client)
-    project_id = 'project_id_example' # str | 
-    resource_type = 'resource_type_example' # str | 
-    resource_id = 'resource_id_example' # str | 
-    post_resource_version_request = uncertainty_engine_resource_client.PostResourceVersionRequest() # PostResourceVersionRequest | 
+    project_id = 'project_id_example' # str |
+    resource_type = 'resource_type_example' # str |
+    resource_id = 'resource_id_example' # str |
+    post_resource_version_request = uncertainty_engine_resource_client.PostResourceVersionRequest() # PostResourceVersionRequest |
 
     try:
         # Post Resource Version
@@ -678,10 +679,10 @@ with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_id** | **str**|  | 
- **resource_type** | **str**|  | 
- **resource_id** | **str**|  | 
- **post_resource_version_request** | [**PostResourceVersionRequest**](PostResourceVersionRequest.md)|  | 
+ **project_id** | **str**|  |
+ **resource_type** | **str**|  |
+ **resource_id** | **str**|  |
+ **post_resource_version_request** | [**PostResourceVersionRequest**](PostResourceVersionRequest.md)|  |
 
 ### Return type
 
@@ -738,10 +739,10 @@ configuration = uncertainty_engine_resource_client.Configuration(
 with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = uncertainty_engine_resource_client.ResourcesApi(api_client)
-    project_id = 'project_id_example' # str | 
-    resource_type = 'resource_type_example' # str | 
-    resource_id = 'resource_id_example' # str | 
-    pending_record_id = 'pending_record_id_example' # str | 
+    project_id = 'project_id_example' # str |
+    resource_type = 'resource_type_example' # str |
+    resource_id = 'resource_id_example' # str |
+    pending_record_id = 'pending_record_id_example' # str |
 
     try:
         # Put Upload Resource Version
@@ -759,10 +760,10 @@ with uncertainty_engine_resource_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_id** | **str**|  | 
- **resource_type** | **str**|  | 
- **resource_id** | **str**|  | 
- **pending_record_id** | **str**|  | 
+ **project_id** | **str**|  |
+ **resource_type** | **str**|  |
+ **resource_id** | **str**|  |
+ **pending_record_id** | **str**|  |
 
 ### Return type
 

@@ -12,22 +12,32 @@
 """  # noqa: E501
 
 import warnings
-from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
 from typing import Any, Dict, List, Optional, Tuple, Union
-from typing_extensions import Annotated
 
-from pydantic import StrictStr
-from typing import Any
-from uncertainty_engine_resource_client.models.get_resource_records_response import GetResourceRecordsResponse
-from uncertainty_engine_resource_client.models.get_resource_version_records_response import GetResourceVersionRecordsResponse
-from uncertainty_engine_resource_client.models.get_resource_version_response import GetResourceVersionResponse
-from uncertainty_engine_resource_client.models.post_resource_record_request import PostResourceRecordRequest
-from uncertainty_engine_resource_client.models.post_resource_version_request import PostResourceVersionRequest
-from uncertainty_engine_resource_client.models.post_resource_version_response import PostResourceVersionResponse
-from uncertainty_engine_resource_client.models.resource_response import ResourceResponse
+from pydantic import Field, StrictFloat, StrictInt, StrictStr, validate_call
+from typing_extensions import Annotated
 
 from uncertainty_engine_resource_client.api_client import ApiClient, RequestSerialized
 from uncertainty_engine_resource_client.api_response import ApiResponse
+from uncertainty_engine_resource_client.models.get_resource_records_response import (
+    GetResourceRecordsResponse,
+)
+from uncertainty_engine_resource_client.models.get_resource_version_records_response import (
+    GetResourceVersionRecordsResponse,
+)
+from uncertainty_engine_resource_client.models.get_resource_version_response import (
+    GetResourceVersionResponse,
+)
+from uncertainty_engine_resource_client.models.post_resource_record_request import (
+    PostResourceRecordRequest,
+)
+from uncertainty_engine_resource_client.models.post_resource_version_request import (
+    PostResourceVersionRequest,
+)
+from uncertainty_engine_resource_client.models.post_resource_version_response import (
+    PostResourceVersionResponse,
+)
+from uncertainty_engine_resource_client.models.resource_response import ResourceResponse
 from uncertainty_engine_resource_client.rest import RESTResponseType
 
 
@@ -2173,6 +2183,7 @@ class ResourcesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "ResourceResponse",
+            '201': "ResourceResponse",
             '422': "HTTPValidationError",
         }
         response_data = self.api_client.call_api(
@@ -2248,7 +2259,7 @@ class ResourcesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ResourceResponse",
+            '201': "ResourceResponse",
             '422': "HTTPValidationError",
         }
         response_data = self.api_client.call_api(
@@ -2324,7 +2335,7 @@ class ResourcesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "ResourceResponse",
+            '201': "ResourceResponse",
             '422': "HTTPValidationError",
         }
         response_data = self.api_client.call_api(
@@ -3033,6 +3044,16 @@ class ResourcesApi:
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
+            body=_body_params,
+            post_params=_form_params,
+            files=_files,
+            auth_settings=_auth_settings,
+            collection_formats=_collection_formats,
+            _host=_host,
+            _request_auth=_request_auth
+        )
+
+
             body=_body_params,
             post_params=_form_params,
             files=_files,
