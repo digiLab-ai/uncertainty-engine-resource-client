@@ -27,9 +27,6 @@ This should only alter files that have been modified since the last generation. 
 
 > [!CAUTION] The client will also regenerate this docs page and is configured by default to give instructions on how to install requirements using pip rather than poetry. This section has been manually added in and should be re-added if removed during regeneration where possible.
 
-## Requirements.
-
-Python 3.8+
 
 ## Installation & Usage
 ### pip install
